@@ -1,5 +1,5 @@
 import React from 'react';
-import Greeting from './greeting'; 
+import Greeting from './greeting';
 
 class Navbar extends React.Component {
   constructor(props){
@@ -7,7 +7,7 @@ class Navbar extends React.Component {
   }
 
   render(){
-
+  
     return(
       <header>
         <h2>Logo Here</h2>

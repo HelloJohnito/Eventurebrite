@@ -13,5 +13,3 @@ const App = (store) => {
 };
 
 export default App;
-
-// <GreetingContainer />
