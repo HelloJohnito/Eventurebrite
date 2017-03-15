@@ -11,12 +11,13 @@ class Navbar extends React.Component {
     return(
       <header className="nav">
 
-        <h2 className="nav-logo">Logo Here</h2>
+        <div className="nav-left">
+          <a className="nav-logo">EventureBrite</a>
+        </div>
 
         <div className="nav-right">
           <Greeting currentUser={this.props.currentUser}
             logout={this.props.logout} />
-          <h4 className="nav-create-events">Create events</h4>
         </div>
 
       </header>

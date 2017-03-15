@@ -1,5 +1,6 @@
 html {
-  font-family: sans-serif;
+  position: relative;
+  height:100%;
 }
 
 body {
@@ -10,12 +11,9 @@ body {
 }
 
 header {
-	display: flex;
-	background:$white;
 	color: $grey;
-  height: 5%;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	padding-bottom: 5px;
+}
+
+a:hover {
+  cursor: pointer;
 }

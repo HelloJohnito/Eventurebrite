@@ -1,47 +1,54 @@
 .nav{
   display: flex;
-  flex-direction: row;
+  align-content: center;
   justify-content: space-between;
   border-bottom: 1px solid $lightgrey;
-  background-color: blue;
 }
 
-.nav-logo {
-  background-color: yellow;
+.nav-left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-//
+
+a.nav-logo {
+  color: $orange;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
 .nav-right{
   display: flex;
   justify-content: flex-end;
   font-size: 12px;
-  width: 40%;
-  background-color: brown;
-}
-//
-.nav-signup-login{
-
-  display: flex;
-  background-color: red;
-  width: 50%;
+  width: 600px;
 }
 
-.nav-signup{
-  width: 50%;
-  margin: auto;
-  text-align: center;
+a.nav-signup{
   border-left: 1px solid #D2D6DF;
-  background-color: purple;
+  padding: 20px;
 }
-//
-.nav-login{
-  width: 50%;
-  text-align: center;
-  margin: auto;
-  border-left: 1px solid #D2D6DF;
-  background-color: yellow;
+
+a.nav-signup:hover{
+  background-color: $lightgrey
 }
-//
-.nav-create-events{
-  background-color: red;
+
+a.nav-login{
   border-left: 1px solid #D2D6DF;
+  padding: 20px;
+}
+
+a.nav-login:hover{
+  background-color: $lightgrey
+}
+
+a.nav-create-events{
+  border-left: 1px solid #D2D6DF;
+  padding: 20px;
+  color: $create-event-botton-blue;
+}
+
+a.nav-create-events:hover {
+  color: #02afff;
 }
