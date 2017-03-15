@@ -1,17 +1,15 @@
-/*.nav{
-  font-family: Benton Sans;
-  border-bottom: 1px solid #D2D6DF;
+.nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid $lightgrey;
   background-color: blue;
-  font-size: 20px;
 }
 
 .nav-logo {
   background-color: yellow;
 }
-
+//
 .nav-right{
   display: flex;
   justify-content: flex-end;
@@ -19,28 +17,31 @@
   width: 40%;
   background-color: brown;
 }
-
+//
 .nav-signup-login{
 
   display: flex;
   background-color: red;
-  width: 25%;
+  width: 50%;
 }
 
 .nav-signup{
   width: 50%;
+  margin: auto;
   text-align: center;
   border-left: 1px solid #D2D6DF;
+  background-color: purple;
 }
-
+//
 .nav-login{
   width: 50%;
   text-align: center;
+  margin: auto;
   border-left: 1px solid #D2D6DF;
+  background-color: yellow;
 }
-
+//
 .nav-create-events{
   background-color: red;
-  width: 25%;
   border-left: 1px solid #D2D6DF;
-}*/
+}
