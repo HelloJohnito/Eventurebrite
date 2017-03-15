@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
 import SessionFormContainer from '../session_form/session_form_container';
-
+import { ModalStyle } from './modal_style';
 
 //props has currentuser: username, bookmarks, events, tickets
 class Greeting extends React.Component {
@@ -27,9 +27,10 @@ class Greeting extends React.Component {
 
     if (this.props.currentUser !== null){
       return(
-        <div>
-          <h1>Welcome {this.props.currentUser.username}</h1>
-          <button onClick={this.props.logout}>Log Out</button>
+        <div className="nav-right">
+          <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
+          <h1 className="nav-username">{this.props.currentUser.username}</h1>
+          <a className="nav-create-events">Create events</a>
         </div>);
     }
     else{
@@ -45,8 +46,8 @@ class Greeting extends React.Component {
         <Modal
           contentLabel="modal-greeting"
           isOpen={this.state.modalOpen}
+          style={ModalStyle}
           onRequestClose={this.onModalClose}>
-
           {content}
           <button onClick={this.onModalClose}>close</button>
         </Modal>
