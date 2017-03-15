@@ -1,0 +1,46 @@
+/*.nav{
+  font-family: Benton Sans;
+  border-bottom: 1px solid #D2D6DF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: blue;
+  font-size: 20px;
+}
+
+.nav-logo {
+  background-color: yellow;
+}
+
+.nav-right{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  width: 40%;
+  background-color: brown;
+}
+
+.nav-signup-login{
+
+  display: flex;
+  background-color: red;
+  width: 25%;
+}
+
+.nav-signup{
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid #D2D6DF;
+}
+
+.nav-login{
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid #D2D6DF;
+}
+
+.nav-create-events{
+  background-color: red;
+  width: 25%;
+  border-left: 1px solid #D2D6DF;
+}*/

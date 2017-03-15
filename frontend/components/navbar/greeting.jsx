@@ -8,7 +8,7 @@ import SessionFormContainer from '../session_form/session_form_container';
 class Greeting extends React.Component {
   constructor(props){
     super(props);
-    
+
     this.onModalClose = this.onModalClose.bind(this);
     this.state = {modalOpen: false, login: false};
   }
@@ -28,18 +28,20 @@ class Greeting extends React.Component {
     if (this.props.currentUser !== null){
       return(
         <div>
-          <h1>Welcome {this.props.currentUser.username}</h1>
+          <h1 class>Welcome {this.props.currentUser.username}</h1>
           <button onClick={this.props.logout}>Log Out</button>
         </div>);
     }
     else{
       return (
-        <div>
-          <button onClick={this.handleClick.bind(this, false)}>Sign Up</button>
+        <div className="nav-signup-login">
+          <a className="nav-signup" onClick={this.handleClick.bind(this, false)}>Sign Up</a>
           <br/>
-          <button onClick={this.handleClick.bind(this, true)}>Log In</button>
+          <br/>
+          <a className="nav-login" onClick={this.handleClick.bind(this, true)}>Log In</a>
 
         <Modal
+          contentLabel="modal-greeting"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}>
 

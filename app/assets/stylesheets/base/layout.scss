@@ -1,0 +1,20 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+	font-family: $benton-sans;
+	font-size: 15px;
+  color: $grey;
+  letter-spacing: .5px;
+}
+
+header {
+	display: flex;
+	background:$white;
+	color: $grey;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
