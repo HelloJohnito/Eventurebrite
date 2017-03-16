@@ -27,3 +27,8 @@ input.form-submit{
   border: 1px solid $lightgrey;
   box-sizing: border-box;
 }
+
+.session-error{
+  color: red;
+  font-size: 12px;
+}

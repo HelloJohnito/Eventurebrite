@@ -15,7 +15,7 @@ export const ModalStyle = {
     padding         : '20px',
     zIndex          :  11,
     width           : '250px',
-    height          : '270px'
+    height          : '300px',
   }
 };
 

@@ -4,13 +4,25 @@ import { Link, withRouter } from 'react-router';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: "", password: "" };
+    this.state = { username: "", password: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.demo = false;
   }
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
   }
+
+  ///Question here
+  // componentWillReceiveProps(newProps){
+  //   if (this.demo) {
+  //     this.demo = false;
+  //     console.log(this.demo);
+  //     console.log(newProps);
+  //     this.setState({ username: "john", password: "password"});
+  //   }
+  // }
 
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
@@ -38,6 +50,12 @@ class SessionForm extends React.Component {
   //   }
   // }
 
+  handleDemo(e){
+    e.preventDefault();
+    this.props.processDemo({username: "john", password: "password"});
+    this.demo = true;
+  }
+
   renderErrors() {
     return(
       <ul>
@@ -56,9 +74,14 @@ class SessionForm extends React.Component {
       <div>
         <h1 className="form-name">{text}</h1>
         <br/>
-        <h1 className="form-option">or other.</h1>
+        <h1 className="form-option"></h1>
         <form className="session-form" onSubmit={this.handleSubmit}>
           <div>
+
+            <div className="session-error">
+              {this.renderErrors()}
+            </div>
+
             <br/>
             <label> Username:
               <input className="form-input" type="text"
@@ -75,7 +98,14 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <input className="form-submit" type="submit" value="Submit" />
+
+            <a className="session-demo" onClick={this.handleDemo.bind(this)}>Demo</a>
+
           </div>
+
+          <div className="session-demo">
+          </div>
+
         </form>
       </div>
     );
