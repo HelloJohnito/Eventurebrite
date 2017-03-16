@@ -1,1 +1,1 @@
-json.partial! 'api/events/event', event: @event
+json.extract! event, :title, :description, :price, :date, :location, :image_url

@@ -1,5 +1,5 @@
 @events.each do |event|
   json.set! event.id do
-    json.partial! 'api/events/event', event: event
+    json.extract! event, :title, :image_url, :location, :date
   end
 end
