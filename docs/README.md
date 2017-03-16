@@ -1,4 +1,4 @@
-#Eventure
+# Eventure
 
 Heroku link
 [Heroku link][heroku]
@@ -10,7 +10,7 @@ Trello link
 
 [trello]: https://trello.com/johnlee283
 
-##Minimum Viable Product
+## Minimum Viable Product
 
 Eventurebrite is a web application inspired by Eventbrite built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
@@ -36,7 +36,7 @@ Eventurebrite is a web application inspired by Eventbrite built using Ruby on Ra
 [schema]: ./schema.md
 
 
-##Implementation Timeline
+## Implementation Timeline
 
 ### Phase 1: Backend setup and Front End User Authentication with CSS (2 days)
 
