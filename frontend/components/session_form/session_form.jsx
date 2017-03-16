@@ -28,15 +28,15 @@ class SessionForm extends React.Component {
     e.preventDefault();
     this.props.processForm(this.state);
   }
-
-  navLink() {
-    if (this.props.formType === "login") {
-      return <Link to="/signup">sign up instead</Link>;
-    }
-    else {
-      return <Link to="/login">log in instead</Link>;
-    }
-  }
+  //
+  // navLink() {
+  //   if (this.props.formType === "login") {
+  //     return <Link to="/signup">sign up instead</Link>;
+  //   }
+  //   else {
+  //     return <Link to="/login">log in instead</Link>;
+  //   }
+  // }
 
   renderErrors() {
     return(
@@ -54,29 +54,27 @@ class SessionForm extends React.Component {
     const text = this.props.formType === "login" ? "Log In" : "Sign Up";
     return (
       <div>
-        <h1>{text}</h1>
-        <form onSubmit={this.handleSubmit}>
-          Welcome!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
+        <h1 className="form-name">{text}</h1>
+        <br/>
+        <h1 className="form-option">or other.</h1>
+        <form className="session-form" onSubmit={this.handleSubmit}>
           <div>
             <br/>
             <label> Username:
-              <input type="text"
+              <input className="form-input" type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
               />
             </label>
             <br/>
             <label> Password:
-              <input type="password"
+              <input className="form-input" type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
               />
             </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <input className="form-submit" type="submit" value="Submit" />
           </div>
         </form>
       </div>

@@ -10,12 +10,23 @@ export const ModalStyle = {
   },
   content : {
     position        : 'fixed',
-    top             : '14%',
-    left            : '37%',
-    right           : '40%',
-    bottom          : '37%',
+    margin          : 'auto',
     border          : '1px solid #ccc',
     padding         : '20px',
-    zIndex          : 11
+    zIndex          :  11,
+    width           : '250px',
+    height          : '270px'
   }
 };
+
+
+// content : {
+//   position        : 'fixed',
+//   top             : '80px',
+//   left            : '450px',
+//   right           : '350px',
+//   bottom          : '220px',
+//   border          : '1px solid #ccc',
+//   padding         : '20px',
+//   zIndex          : 11,
+// }

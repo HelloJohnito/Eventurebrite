@@ -22,7 +22,7 @@
       date: 1/12/2017
       location: 'San Francisco'
       images: image_url
-      category-tag: 'outdoor activity' 
+      category-tag: 'outdoor activity'
     }
   }
 

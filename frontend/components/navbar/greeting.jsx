@@ -13,6 +13,10 @@ class Greeting extends React.Component {
     this.state = {modalOpen: false, login: false};
   }
 
+  componentWillReceiveProps(newProps){
+    this.setState({modalOpen: false});
+  }
+
   handleClick(bool){
     this.setState({modalOpen: true, login: bool});
   }
@@ -46,8 +50,8 @@ class Greeting extends React.Component {
         <Modal
           contentLabel="modal-greeting"
           isOpen={this.state.modalOpen}
-          style={ModalStyle}
-          onRequestClose={this.onModalClose}>
+          onRequestClose={this.onModalClose}
+          style={ModalStyle}>
           {content}
           <button onClick={this.onModalClose}>close</button>
         </Modal>

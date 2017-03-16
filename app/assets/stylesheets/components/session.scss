@@ -1,0 +1,29 @@
+h1.form-name{
+  font-size: 22px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+h1.form-option{
+  text-align: center;
+}
+
+input.form-input{
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $lightgrey;
+}
+
+input.form-submit{
+  background-color: $green;
+  color: $white;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid $lightgrey;
+  box-sizing: border-box;
+}
