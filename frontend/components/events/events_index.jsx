@@ -13,8 +13,9 @@ class EventsIndex extends React.Component {
 
   render(){
     return(
-      <div className="events-index-outer">
-        <ul className="events-index-inner">
+      <div className="index-events-outer">
+        <h1 className="index-event-header">Events for you</h1>
+        <ul className="index-events-inner">
           {this.props.events.map( event => (
             <EventsIndexItem
               key={event.id}

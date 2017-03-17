@@ -7,7 +7,7 @@ class EventDetail extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchDetailEvent(this.props.params.eventId);
+    this.props.fetchDetailEvent(this.props.eventId);
   }
 
   render() {

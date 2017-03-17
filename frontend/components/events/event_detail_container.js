@@ -3,8 +3,9 @@ import EventDetail from './event_detail';
 import { fetchDetailEvent } from "../../actions/event_actions";
 
 
-const mapStateToProps = state => ({
-  event: state.eventDetail
+const mapStateToProps = (state, ownProps) => ({
+  event: state.eventDetail,
+  eventId: ownProps.eventId
 });
 
 const mapDispatchToProps = dispatch => ({
