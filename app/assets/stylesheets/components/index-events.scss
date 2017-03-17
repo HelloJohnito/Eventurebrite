@@ -11,14 +11,14 @@ h1.index-event-header {
 }
 
 ul.index-events-inner {
+}
+
+.index-event-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // background-color: red;
-
   margin: auto;
-  width: 100%;
-  min-width: 600px; //Take off
+  max-width: 1000px;
 }
 
 li.index-event {

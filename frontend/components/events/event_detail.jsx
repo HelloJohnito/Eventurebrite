@@ -12,8 +12,10 @@ class EventDetail extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="detail-event">
         <h1>{this.props.event.title}</h1>
+        <p>{this.props.event.description}</p>
+        <p>{this.props.event.price}</p>
       </div>
     );
   }
@@ -23,8 +25,6 @@ class EventDetail extends React.Component {
 export default EventDetail;
 
 
-// <p>{this.props.description}</p>
-// <p>{this.props.price}</p>
-// <p>{this.props.date}</p>
-// <p>{this.props.location}</p>
-// <p>{this.props.image_url}</p>
+// <p>{this.props.event.date}</p>
+// <p>{this.props.event.location}</p>
+// <p>{this.props.event.image_url}</p>

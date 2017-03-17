@@ -14,17 +14,19 @@ class EventsIndex extends React.Component {
   render(){
     return(
       <div className="index-events-outer">
-        <h1 className="index-event-header">Events for you</h1>
         <ul className="index-events-inner">
-          {this.props.events.map( event => (
-            <EventsIndexItem
-              key={event.id}
-              eventId={event.id}
-              title={event.title}
-              image={event.image_url}
-              location={event.location}
-              date={event.date} />
-          ))}
+          <h1 className="index-event-header">Events for you</h1>
+          <div className="index-event-list">
+            {this.props.events.map( event => (
+              <EventsIndexItem
+                key={event.id}
+                eventId={event.id}
+                title={event.title}
+                image={event.image_url}
+                location={event.location}
+                date={event.date} />
+            ))}
+          </div>  
         </ul>
       </div>
     );
