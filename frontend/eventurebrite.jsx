@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(function() {
     $('#slideshow > div:first')
-      .fadeOut(3000)
+      .fadeOut(2000)
       .next()
-      .fadeIn(2000)
+      .fadeIn(1000)
       .end()
       .appendTo('#slideshow');
-  },  3000);
+  },  5000);
 });

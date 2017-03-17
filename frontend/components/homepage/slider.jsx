@@ -7,13 +7,16 @@ class SliderImage extends React.Component {
     return (
       <div id="slideshow">
         <div>
-          <img className="slide-image" src="https://cdn.wakemakers.com/media/wysiwyg/blog/2016/12/holiday-category-header-surf.jpg"/>
+          <img className="slide-image" src="http://www.snotrick.com/image/119104281.jpg"/>
         </div>
         <div>
-          <img className="slide-image" src="http://www.northeasternontario.com/wp-content/uploads/2015/10/paddling-hero-21.jpg"/>
+          <img className="slide-image" src="http://www.copperpointechurch.com/_img/slider/_Website_Service_Times_BG_.jpg"/>
         </div>
         <div>
-          <img className="slide-image" src="http://www.polish-days.pl/images/banery_podstrony/baner_koncerty.jpg"/>
+          <img className="slide-image" src="http://www.thedolphininn.com/image/113309387.jpg"/>
+        </div>
+        <div>
+          <img className="slide-image" src="http://www.boatpartyny.com/images/4thofjuly.jpg"/>
         </div>
       </div>
     )
