@@ -7,8 +7,8 @@ export const RECEIVE_DETAIL_EVENT = "RECEIVE_DETAIL_EVENT";
 export const RECEIVE_NEW_EVENT = "RECEIVE_NEW_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
-export const fetchAllEvents = () => dispatch => (
-  ApiUtil.fetchEvents().then( events => dispatch(receiveAllEvents(events)))
+export const fetchAllEvents = (limit) => dispatch => (
+  ApiUtil.fetchEvents(limit).then( events => dispatch(receiveAllEvents(events)))
 );
 
 export const fetchDetailEvent = (id) => dispatch => (

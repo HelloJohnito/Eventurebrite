@@ -1,6 +1,6 @@
 class Api::EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.limit(params[:limit]) || Event.all
     render 'api/events/index'
   end
 

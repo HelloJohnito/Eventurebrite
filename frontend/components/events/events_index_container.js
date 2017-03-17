@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
-import {fetchEvents, fetchEvent, createEvent} from '../../actions/event_actions';
+import { fetchAllEvents, fetchDetailEvent, createEvent } from '../../actions/event_actions';
 import EventsIndex from "./events_index";
 
 const mapStateToProps = (state) => ({
-  events: Object.keys(state.events).map( id => state.events[id])
+    events: Object.keys(state.eventsIndex).map( id => state.eventsIndex[id])
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchEvents: () => dispatch(fetchEvents()),
-  fetchEvent: (id) => dispatch(fetchEvent(id)),
+  fetchAllEvents: (limit) => dispatch(fetchAllEvents(limit)),
+  fetchDetailEvent: (id) => dispatch(fetchDetailEvent(id)),
   createEvent: (event) => dispatch(createEvent(event))
 });
 
