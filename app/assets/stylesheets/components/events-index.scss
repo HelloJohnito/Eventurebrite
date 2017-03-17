@@ -1,0 +1,25 @@
+.events-index-outer {
+  height: 1000px;
+  background-color: black;
+  padding: 150px;
+}
+
+ul.events-index-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: red;
+  margin: auto;
+  min-height: 1000px;
+  min-width: 500px
+}
+
+li.event-index {
+  position: relative;
+  height: 300px;
+  min-width: 330px;
+  margin: 50px;
+  border: 1px solid black;
+
+}
