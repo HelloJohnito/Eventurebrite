@@ -18,4 +18,12 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :tickets
   has_many :bookmarks
+  has_many :category_listings
+
+  has_many(
+  :categories,
+  through: :category_listings,
+  source: :category
+  )
+
 end
