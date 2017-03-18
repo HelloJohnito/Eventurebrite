@@ -6,7 +6,7 @@
 #  title       :string
 #  description :text
 #  user_id     :integer
-#  price       :integer
+#  price       :string
 #  date        :date
 #  location    :string
 #  created_at  :datetime         not null
