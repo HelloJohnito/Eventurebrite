@@ -3,6 +3,7 @@ import merge from 'lodash/merge';
 
 const defaultEventDetail = {
   title: "",
+  user: "",
   description: "",
   price: "",
   date: "",

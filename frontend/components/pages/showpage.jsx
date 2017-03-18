@@ -3,7 +3,7 @@ import EventDetailContainer from '../events/event_detail_container';
 import BackgroundImage from '../display/background_image';
 
 const ShowPage = (props) => (
-  <div>
+  <div className="detail-event">
     <BackgroundImage />
     <EventDetailContainer eventId={props.params.eventId} />
   </div>
