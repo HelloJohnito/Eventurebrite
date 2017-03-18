@@ -39,8 +39,14 @@ class EventDetail extends React.Component {
         </div>
 
         <div className="detail-event-detail-bottom">
-          <p className="detail-event-description">{this.props.event.description}</p>
-          <p className="detail-event-location">{this.props.event.location}</p>
+          <p className="detail-event-description">
+            Description:
+            {this.props.event.description}
+          </p>
+          <p className="detail-event-location">
+            Location:
+            {this.props.event.location}
+          </p>
         </div>
 
       </div>

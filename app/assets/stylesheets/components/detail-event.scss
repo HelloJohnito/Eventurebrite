@@ -59,9 +59,6 @@ p.detail-event-user{
   margin: 25px;
 }
 
-p.detail-event-location{
-  margin-bottom: 25px;
-}
 
 //middle
 
@@ -88,12 +85,24 @@ p.detail-event-location{
   width: 355px;
   text-align: center;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 //bottom
 .detail-event-detail-bottom{
-
+  display: flex;
+  padding-top: 50px;
 }
 
 p.detail-event-description{
+  box-sizing: border-box;
+  padding: 20px 50px;
+  width: 68%;
+  height: auto;
+}
+
+p.detail-event-location{
+  width: 34%;
+  height: auto;
+  padding-top: 20px;
 }
