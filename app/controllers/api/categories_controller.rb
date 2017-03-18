@@ -5,6 +5,11 @@ class Api::CategoriesController < ApplicationController
     render 'api/categories/index'
   end
 
+  def show
+    @category = Category.find(params[:id])
+    render 'api/categories/show'
+  end
+
   def create
     @category = Category.new(category_params)
     if @category.save

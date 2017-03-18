@@ -16,12 +16,12 @@ e4 = Event.create(title: "Live Concert for free", description: "Up in coming art
 
 
 Category.destroy_all
-music = Category.create(category: "Music")
-sports = Category.create(category: "Sports")
-arts = Category.create(category: "Arts")
+arts = Category.create(category: "arts")
 classes = Category.create(category: "classes")
+music = Category.create(category: "musics")
+networking = Category.create(category: "networking")
 parties = Category.create(category: "parties")
-networking = Category.create(category: "Networking")
+sports = Category.create(category: "sports")
 
 CategoryListing.destroy_all
 cl1 = CategoryListing.create(category_id: sports.id, event_id: e1.id)
