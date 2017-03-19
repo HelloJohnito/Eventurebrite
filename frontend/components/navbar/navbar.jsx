@@ -18,7 +18,7 @@ class Navbar extends React.Component {
 
         <div className="nav-right">
           <Greeting currentUser={this.props.currentUser}
-            logout={this.props.logout} />
+            logout={this.props.logout} clearErrors={this.props.clearErrors} />
         </div>
 
       </header>

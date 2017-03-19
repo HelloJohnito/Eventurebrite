@@ -23,6 +23,7 @@ class Greeting extends React.Component {
 
   onModalClose(){
     this.setState({modalOpen: false});
+    this.props.clearErrors();
   }
 
   render(){
