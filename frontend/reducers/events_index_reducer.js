@@ -5,7 +5,6 @@ const EventsIndexReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type){
     case RECEIVE_ALL_EVENTS:
-      // console.log(action);
       return merge({}, action.events);
     default:
       return state;

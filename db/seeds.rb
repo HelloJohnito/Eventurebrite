@@ -14,6 +14,8 @@ e3 = Event.create(title: "Drinking away 2017", description: "Are you ready for a
 
 e4 = Event.create(title: "Live Concert for free", description: "Up in coming artists sharing the night on stage to perform for the people!", user_id: jenny.id, price: "Free", date: Date.new(2017, 11, 15), location: "San Diego", image_url: "image_url")
 
+e4 = Event.create(title: "Vip tickets to Elvis Live!", description: "Get your VIP tickets for Elvis Live!", user_id: jenny.id, price: "$100", date: Date.new(2017, 11, 15), location: "Los Angeles", image_url: "image_url")
+
 
 Category.destroy_all
 arts = Category.create(category: "arts")

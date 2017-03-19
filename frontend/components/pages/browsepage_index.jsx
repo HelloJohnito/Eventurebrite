@@ -3,7 +3,7 @@ import EventBrowseContainer from '../events/event_browse_container';
 import CategorySidebar from '../display/category_sidebar';
 
 const BrowsePageIndex = () => (
-  <div>
+  <div className="browse-page">
     <CategorySidebar />
     <EventBrowseContainer type="index" />
   </div>
