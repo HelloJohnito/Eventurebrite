@@ -26,48 +26,57 @@
 .category-pictures-music{
   background-color: yellow;
   box-sizing: border-box;
-  flex: .5 .5 670px;
-  min-width: 670px;
-  max-width: 690px;
+  flex: .5 .5 600px;
+  // min-width: 670px;
+  max-width: 655px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-food{
   background-color: purple;
-  min-width: 320px;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-classes{
   background-color: lightgrey;
-  min-width: 320px;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-arts{
   background-color: red;
-  width: 320px;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-parties{
   background-color: green;
-  width: 320px;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-sports{
   background-color: blue;
-  width: 320px;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
   height: 220px;
   margin: 10px;
 }
 .category-pictures-networking{
   background-color: orange;
   box-sizing: border-box;
-  flex: .5 .5 670px;
-  min-width: 670px;
-  max-width: 690px;
+  flex: .5 .5 600px;
+  max-width: 655px;
   height: 220px;
   margin: 10px;
 }
