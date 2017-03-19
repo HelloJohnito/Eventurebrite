@@ -53,8 +53,8 @@ class Greeting extends React.Component {
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose}
           style={ModalStyle}>
+          <button className="modal-close" onClick={this.onModalClose}>X</button>
           {content}
-          <button onClick={this.onModalClose}>close</button>
         </Modal>
       </div>
     );
