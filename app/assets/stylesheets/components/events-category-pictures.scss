@@ -2,7 +2,6 @@
   margin-top: 50px;
   width: 100%;
   height: 800px; // take off
-  background-color: lightblue;
 }
 
 .category-pictures-title{
@@ -10,73 +9,106 @@
   text-align: center;
   font-size: 35px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .category-pictures-inner{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: white;
   margin: auto;
-  max-width: 90%;
-  height: 800px;
+  max-width: 1200px;;
+  height: 700px;
 }
 
-.category-pictures-music{
-  background-color: yellow;
+.category-pictures-sports{
   box-sizing: border-box;
   flex: .5 .5 600px;
   // min-width: 670px;
   max-width: 655px;
   height: 220px;
-  margin: 10px;
+  margin: 20px;
 }
-.category-pictures-food{
-  background-color: purple;
-  flex: .5 .5 270px;
-  box-sizing: border-box;
-  max-width: 320px;
+
+img.sports-picture{
+  width: 670px;
   height: 220px;
-  margin: 10px;
 }
-.category-pictures-classes{
-  background-color: lightgrey;
-  flex: .5 .5 270px;
-  box-sizing: border-box;
-  max-width: 320px;
-  height: 220px;
-  margin: 10px;
-}
-.category-pictures-arts{
-  background-color: red;
-  flex: .5 .5 270px;
-  box-sizing: border-box;
-  max-width: 320px;
-  height: 220px;
-  margin: 10px;
-}
-.category-pictures-parties{
-  background-color: green;
-  flex: .5 .5 270px;
-  box-sizing: border-box;
-  max-width: 320px;
-  height: 220px;
-  margin: 10px;
-}
-.category-pictures-sports{
-  background-color: blue;
-  flex: .5 .5 270px;
-  box-sizing: border-box;
-  max-width: 320px;
-  height: 220px;
-  margin: 10px;
-}
+
 .category-pictures-networking{
-  background-color: orange;
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px;
+}
+
+img.networking-picture {
+  width: 320px;
+  height: 220px;
+}
+
+.category-pictures-classes{
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px;
+}
+
+img.classes-picture{
+  width: 320px;
+  height: 220px;
+}
+
+.category-pictures-arts{
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px;
+}
+
+img.arts-picture{
+  width: 320px;
+  height: 220px;
+}
+
+.category-pictures-parties{
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px;
+}
+img.parties-picture{
+  width: 320px;
+  height: 220px;
+}
+
+.category-pictures-music{
+  flex: .5 .5 270px;
+  box-sizing: border-box;
+  max-width: 320px;
+  height: 220px;
+  margin: 20px;
+}
+
+img.music-picture{
+  width: 320px;
+  height: 220px;
+}
+
+.category-pictures-food{
   box-sizing: border-box;
   flex: .5 .5 600px;
   max-width: 655px;
   height: 220px;
-  margin: 10px;
+  margin: 20px;
+}
+
+img.food-picture{
+  width: 670px;
+  height: 220px;
+  padding-top: 20px;
 }
