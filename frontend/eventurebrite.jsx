@@ -20,13 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 
-  $("#slideshow > div:gt(0)").hide();
-  setInterval(function() {
-    $('#slideshow > div:first')
-      .fadeOut(2000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#slideshow');
-  },  5000);
 });

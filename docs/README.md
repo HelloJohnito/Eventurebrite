@@ -46,30 +46,41 @@ Eventurebrite is a web application inspired by Eventbrite built using Ruby on Ra
 - modal
 - css
 
-### Phase 2: Model, API, components, and css for events. (3 days)
+### Phase 2: Model, API, components, and css for events. (2 days)
 
 **Objective:**
 - Create functioning event index and event details containers.
-- Be able to list the events by Categories  
-  - Selectors
+
 - Add the event Index Container to the home page
 - Css home page/ index page
 
-### Phase 3: ### Phase 4: Event Details with tickets and bookmark functions and design. Add Event new page (2 day)
-
-**Objective:**
-- Add Ticket and Bookmark functions
-
-### Phase 4: Add Event New Page  (1 day)
+### Phase 3: Add Event New Page  (1 day)
 
 **Objective:**
 - Add Event New Page
 - design
 
-### Phase 5: Finish Styling (1 day)
+## Phase 4: Create Categories backend. (2 day)
 
 **Objective:**
-- Finish Styling
+- Create Category model
+- Be able to list the events by Categories
+- Display events on the browse page.
+- CSS
+
+### Phase 5: Create User Page and start Event Details with tickets function (1 day)
+
+**Objective:**
+- Create User Page
+- Add Ticket function
+
+### Phase 6: Create Event Details with bookmark option and finish Tickets (1 day)
+
+**Objective:**
+- Finish Tickets function
+- Add Bookmark function
+- User is able to bookmark events
+
 
 ### Bonus Features (TBD)
 - [ ] Google Maps
