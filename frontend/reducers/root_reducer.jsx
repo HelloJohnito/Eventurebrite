@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 	session: SessionReducer,
 	eventsIndex: EventsReducer,
 	eventDetail: EventDetailReducer,
-	category: CategoryReducer
+	categories: CategoryReducer
 });
 
 export default rootReducer;

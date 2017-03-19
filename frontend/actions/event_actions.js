@@ -21,6 +21,10 @@ export const createDetailEvent = (event) => dispatch => (
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
+// export const filterByCategory = () => dispatch => (
+//
+// );
+
 
 const receiveAllEvents = (events) => ({
     type: RECEIVE_ALL_EVENTS,

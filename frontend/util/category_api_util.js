@@ -7,18 +7,9 @@ export const fetchCategories = () => (
   })
 );
 
-export const fetchCategory = (categoryId) => (
+export const fetchCategory = (id) => (
   $.ajax({
     method: 'GET',
-    url: `api/categories/${categoryId}`,
+    url: `api/categories/${id}`,
   })
 );
-
-//check
-// export const createCategory = (eventId) => (
-//   $.ajax({
-//     method: 'POST',
-//     url: 'api/categories',
-//     data: { eventId }
-//   })
-// );
