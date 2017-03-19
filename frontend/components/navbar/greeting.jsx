@@ -33,6 +33,7 @@ class Greeting extends React.Component {
     if (this.props.currentUser !== null){
       return(
         <div className="nav-right">
+          <Link to= '/browse' className="nav-browse">Browse Events</Link>
           <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
           <h1 className="nav-username">{this.props.currentUser.username}</h1>
           <a className="nav-create-events">Create events</a>
@@ -42,6 +43,7 @@ class Greeting extends React.Component {
       return (
         <div className="nav-right">
 
+          <Link to= '/browse' className="nav-browse">Browse Events</Link>
           <a className="nav-signup" onClick={this.handleClick.bind(this, false)}>Sign Up</a>
 
           <a className="nav-login" onClick={this.handleClick.bind(this, true)}>Log In</a>

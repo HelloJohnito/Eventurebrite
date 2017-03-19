@@ -18,7 +18,7 @@ e4 = Event.create(title: "Live Concert for free", description: "Up in coming art
 Category.destroy_all
 arts = Category.create(category: "arts")
 classes = Category.create(category: "classes")
-music = Category.create(category: "musics")
+music = Category.create(category: "music")
 networking = Category.create(category: "networking")
 parties = Category.create(category: "parties")
 sports = Category.create(category: "sports")

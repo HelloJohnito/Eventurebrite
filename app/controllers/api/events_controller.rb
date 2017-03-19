@@ -1,8 +1,23 @@
 class Api::EventsController < ApplicationController
   def index
-    @events = Event.limit(params[:limit]) || Event.all
+    if params[:category]
+      @events = Event.find_by_sql(<<-SQL)
+        SELECT *
+        FROM events
+        JOIN category_listings
+          ON category_listings.event_id = events.id
+        JOIN categories
+          ON categories.id = category_listings.category_id
+        WHERE categories.category = '#{params[:category]}'
+        LIMIT #{params[:limit]}
+      SQL
+    else
+      @events = Event.limit(params[:limit]) || Event.all
+    end
+
     render 'api/events/index'
   end
+
 
   def show
     @event = Event.find(params[:id])

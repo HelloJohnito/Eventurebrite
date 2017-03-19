@@ -20,3 +20,11 @@ export const createEvent = (event) => (
     data: { event }
   })
 );
+
+export const filterByCategory = (limit, category) => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/events',
+    data: { limit, category }
+  })
+);

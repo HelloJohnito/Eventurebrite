@@ -5,7 +5,7 @@ import CategorySidebar from '../display/category_sidebar';
 const BrowsePageCategory = (props) => (
   <div>
     <CategorySidebar />
-    <EventBrowseContainer type="category" />
+    <EventBrowseContainer type="category" category={props.params.category} />
   </div>
 );
 

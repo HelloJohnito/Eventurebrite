@@ -9,7 +9,7 @@ const CategorySidebar = () => (
 
       <li><Link to='/browse/arts'>Arts</Link></li>
       <li><Link to='/browse/classes'>Classes</Link></li>
-      <li><Link to='/browse/musics'>Musics</Link></li>
+      <li><Link to='/browse/music'>Music</Link></li>
       <li><Link to='/browse/networking'>Networking</Link></li>
       <li><Link to='/browse/parties'>Parties</Link></li>
       <li><Link to='/browse/sports'>Sports</Link></li>

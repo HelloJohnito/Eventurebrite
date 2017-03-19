@@ -21,9 +21,9 @@ export const createDetailEvent = (event) => dispatch => (
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-// export const filterByCategory = () => dispatch => (
-//
-// );
+export const filterByCategory = (limit, category) => dispatch => (
+  ApiUtil.filterByCategory(limit, category).then( events => dispatch(receiveAllEvents(events)))
+);
 
 
 const receiveAllEvents = (events) => ({
