@@ -1,7 +1,7 @@
 .index-events-outer {
-  height: 1000px; // take off
+  // height: 1000px; // take off
   // background-color: black;
-  padding: 180px 50px;
+  padding: 180px 50px 0px 50px;
 }
 
 h1.index-event-header {
@@ -69,4 +69,29 @@ li.index-event {
 
 .index-event-bookmark-icon {
 
+}
+
+.index-event-seemore-button{
+  width: 115px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  padding: 10px 20px 5px 20px;
+  border: 2px solid $blue;
+}
+
+.index-event-seemore-link{
+  color: $blue;
+  font-size: 20px;
+  font-weight: 500px;
+  width: 5px;
+  height: 5px;
+}
+
+.index-event-seemore-button:hover{
+  background-color: $lightgrey;
+}
+
+.index-event-seemore-link:hover{
+  // color: white;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import EventsIndexItem from './events_index_item';
-
+import { Link } from 'react-router';
 
 class EventsIndex extends React.Component {
   constructor(props){
@@ -26,8 +26,12 @@ class EventsIndex extends React.Component {
                 location={event.location}
                 date={event.date} />
             ))}
-          </div>  
+          </div>
         </ul>
+
+        <div className="index-event-seemore-button">
+          <Link to="/browse" className="index-event-seemore-link">SEE MORE</Link>
+        </div>
       </div>
     );
   }

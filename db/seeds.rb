@@ -16,10 +16,13 @@ e4 = Event.create(title: "Live Concert for free", description: "Up in coming art
 
 e4 = Event.create(title: "Vip tickets to Elvis Live!", description: "Get your VIP tickets for Elvis Live!", user_id: jenny.id, price: "$100", date: Date.new(2017, 11, 15), location: "Los Angeles", image_url: "image_url")
 
+e5 = Event.create(title: "Peanut Butter Jelly Time!", description: "Yes! That is right! It is peanut butter Jelly Time!! Join us as we go over 15 different ways to making the BEST PEANUT BUTTER JELLY SANWHICH!", user_id: nancy.id, price: "$10", date: Date.new(2017, 11, 1), location: "Los Angeles", image_url: "image_url")
+
 
 Category.destroy_all
 arts = Category.create(category: "arts")
 classes = Category.create(category: "classes")
+food = Category.create(category: "food and drink")
 music = Category.create(category: "music")
 networking = Category.create(category: "networking")
 parties = Category.create(category: "parties")
@@ -30,3 +33,4 @@ cl1 = CategoryListing.create(category_id: sports.id, event_id: e1.id)
 cl2 = CategoryListing.create(category_id: sports.id, event_id: e2.id)
 cl3 = CategoryListing.create(category_id: parties.id, event_id: e3.id)
 cl4 = CategoryListing.create(category_id: music.id, event_id: e4.id)
+cl5 = CategoryListing.create(category_id: food.id, event_id: e5.id)

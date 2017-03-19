@@ -30,9 +30,17 @@ a.nav-logo {
   padding: 20px;
 }
 
+.nav-browse:hover{
+  background-color: $lightgrey;
+}
+
 button.nav-logout{
   border-left: 1px solid #D2D6DF;
   padding: 20px;
+}
+
+button.nav-logout:hover{
+  background-color: $lightgrey;
 }
 
 h1.nav-username{
@@ -66,7 +74,7 @@ a.nav-create-events{
 }
 
 a.nav-create-events:hover {
-  color: #02afff;
+  color: $hover-blue;
 }
 
 button.modal-close {
