@@ -16,13 +16,19 @@ class EventBrowse extends React.Component {
     }
   }
 
+  capitalize(name){
+    return name[0].toUpperCase() + name.slice(1);
+  }
+
   render(){
     // console.log("This is the current props")
     // console.log(this.props)
+    let text = this.props.category !== undefined ? this.capitalize(this.props.category) : "All";
+
     return(
       <div className="browse-events-outer">
         <ul className="browse-events-inner">
-          <h1>Categories:</h1>
+          <h1 className="browse-event-header">Categories: {text}</h1>
           <div className="browse-event-list">
             {this.props.events.map( event => (
               <EventBrowseItem
