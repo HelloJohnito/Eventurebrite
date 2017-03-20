@@ -1,0 +1,84 @@
+.browse-page{
+  display: flex;
+  justify-content: center;
+  background-color: $white-background;
+  width: 100%;
+  // height: auto;
+}
+
+h1.browse-event-header {
+  margin: auto;
+  text-align: center;
+  font-size: 25px;
+}
+
+ul.browse-events-inner {
+}
+
+.browse-event-list {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // margin: auto;
+  max-width: 1200px;
+}
+
+li.browse-event {
+  // flex: .5 .5 500px;
+  // height: auto;
+
+  height: 160px;
+  width: 800px;
+  margin: 30px 30px;
+  border: 1px solid $lightgrey;
+  box-shadow: 3px #888888;
+}
+
+.browse-event-inner {
+  display: flex;
+}
+
+.browse-event-image-url {
+  width: 100%;
+  height: 160px;
+}
+
+.browse-event-info {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.browse-event-info-top {
+  margin-top: 10px;
+}
+
+.browse-event-date {
+}
+
+.browse-event-title{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.browse-event-info-bottom {
+  border-top: 1px solid $lightgrey;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 7px;
+}
+
+.browse-event-category {
+
+}
+
+.browse-event-bookmark-icon {
+
+}
