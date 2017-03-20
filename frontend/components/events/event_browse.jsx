@@ -16,8 +16,8 @@ class EventBrowse extends React.Component {
   }
 
   render(){
-    console.log("This is the current props")
-    console.log(this.props)
+    // console.log("This is the current props")
+    // console.log(this.props)
     return(
       <div>
 
