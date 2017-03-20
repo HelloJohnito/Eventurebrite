@@ -8,7 +8,7 @@ class EventsIndex extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchAllEvents(12);
+    this.props.fetchAllEvents(9);
   }
 
   render(){
@@ -29,12 +29,26 @@ class EventsIndex extends React.Component {
           </div>
         </ul>
 
-        <div className="index-event-seemore-button">
-          <Link to="/browse" className="index-event-seemore-link">SEE MORE</Link>
+        <div className="index-event-seemore-outer-button">
+          <div className="index-event-seemore-inner-button">
+            <Link to="/browse" className="index-event-seemore-link">
+              <div className="index-event-seemore-button">
+                See More
+              </div>
+            </Link>
+          </div>
         </div>
+
       </div>
     );
   }
 }
 
 export default EventsIndex;
+
+
+
+
+// <div className="index-event-seemore-button">
+//   <Link to="/browse" className="index-event-seemore-link">SEE MORE</Link>
+// </div>

@@ -71,11 +71,21 @@ li.index-event {
 
 }
 
+.index-event-seemore-outer-button{
+  display: flex;
+  justify-content: center;
+}
+
+.index-event-seemore-inner-button{
+  width: 115px;
+  height: 30px;
+}
+
 .index-event-seemore-button{
   width: 115px;
   height: 30px;
-  margin: auto;
   text-align: center;
+  margin: auto;
   padding: 10px 20px 5px 20px;
   border: 2px solid $blue;
 }
@@ -89,9 +99,9 @@ li.index-event {
 }
 
 .index-event-seemore-button:hover{
-  background-color: $lightgrey;
+  background-color: $blue;
 }
 
 .index-event-seemore-link:hover{
-  // color: white;
+  color: white;
 }
