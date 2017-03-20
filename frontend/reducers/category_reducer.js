@@ -6,7 +6,7 @@ const CategoryReducer = (state = {}, action) => {
   switch (action.type){
     case RECEIVE_ALL_CATEGORIES:
       return merge({}, action.categories);
-    case RECEIVE_CATEGORY: // check here
+    case RECEIVE_CATEGORY: 
       return merge({}, action.category);
     default:
       return state;

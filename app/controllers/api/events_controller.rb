@@ -1,10 +1,11 @@
 class Api::EventsController < ApplicationController
-  def index
 
+  def index
     if params[:category]
-      @events = Event.joins(:categories).where(params[:category])
+      @events  = Event.joins(:categories).where("categories.category = ?", params[:category]).limit(params[:limit])
+
       # @events = Event.find_by_sql(<<-SQL)
-      #   SELECT events
+      #   SELECT *
       #   FROM events
       #   JOIN category_listings
       #     ON category_listings.event_id = events.id
