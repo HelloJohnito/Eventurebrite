@@ -30,16 +30,16 @@ class SliderImage extends React.Component {
     return (
       <div id="slideshow">
         <div>
-          <img className="slide-image" src="http://www.snotrick.com/image/119104281.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490025934/snowboard_m1qzhp.jpg"/>
         </div>
         <div>
-          <img className="slide-image" src="http://www.copperpointechurch.com/_img/slider/_Website_Service_Times_BG_.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026685/concert_su3a20.jpg"/>
         </div>
         <div>
-          <img className="slide-image" src="http://www.thedolphininn.com/image/113309387.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026763/surf_q1ljog.jpg"/>
         </div>
         <div>
-          <img className="slide-image" src="http://www.boatpartyny.com/images/4thofjuly.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026930/fireworks_ec9foi.jpg"/>
         </div>
       </div>
     );

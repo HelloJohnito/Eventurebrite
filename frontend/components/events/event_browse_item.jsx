@@ -7,7 +7,7 @@ const EventBrowseItem = (props) => (
     <Link to={`/events/${props.eventId}`}>
       <div className="browse-event-inner">
         <div className="browse-event-image">
-            <img className="browse-event-image-url" src="https://t1.uc.ltmcdn.com/en/images/2/8/4/img_the_best_hiking_apps_for_iphone_10482_300_150.jpg" />
+            <img className="browse-event-image-url" src={props.image} />
         </div>
         <div className="browse-event-info">
           <div className="browse-event-info-top">

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const BackgroundImage = () => (
-  <img className="detail-background-image" src="https://www.cloudschool.org/static/coverart/grass2@2000.jpg" />
+  <img className="detail-background-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490027634/light_wtlzlq.jpg" />
 );
 
 export default BackgroundImage;

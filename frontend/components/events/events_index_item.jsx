@@ -6,7 +6,7 @@ const EventsIndexItem = (props) => (
   <li className="index-event">
     <Link to={`/events/${props.eventId}`}>
       <div className="index-event-image">
-          <img className="index-event-image-url" src="https://t1.uc.ltmcdn.com/en/images/2/8/4/img_the_best_hiking_apps_for_iphone_10482_300_150.jpg" />
+          <img className="index-event-image-url" src={props.image} />
       </div>
       <div className="index-event-info">
         <div className="index-event-info-top">
