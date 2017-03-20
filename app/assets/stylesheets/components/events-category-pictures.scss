@@ -1,7 +1,7 @@
 .category-pictures-outer{
-  margin-top: 50px;
+  margin: 50px;
   width: 100%;
-  height: 1000px; 
+  height: 1000px;
 }
 
 .category-pictures-title{
@@ -25,23 +25,92 @@
   flex: .5 .5 600px;
   max-width: 655px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-sports:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-sports:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.sports-picture{
   width: 670px;
   height: 220px;
+  transition: 1s ease-in;
 }
+
+.category-pictures-sports-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 290px;
+  font-size: 30px;
+}
+
+span.category-pictures-sports-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 260px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
+}
+
 
 .category-pictures-networking{
   flex: .5 .5 270px;
   box-sizing: border-box;
   max-width: 320px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-networking:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-networking:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.networking-picture {
   width: 320px;
   height: 220px;
+  transition: 1s ease-in;
+}
+
+.category-pictures-networking-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 75px;
+  font-size: 30px;
+}
+
+span.category-pictures-networking-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 65px;
+  font-size: 18px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .category-pictures-classes{
@@ -49,11 +118,45 @@ img.networking-picture {
   box-sizing: border-box;
   max-width: 320px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-classes:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-classes:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.classes-picture{
   width: 320px;
   height: 220px;
+  transition: 1s ease-in;
+}
+
+.category-pictures-classes-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 105px;
+  font-size: 30px;
+}
+
+span.category-pictures-classes-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 65px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .category-pictures-arts{
@@ -61,11 +164,45 @@ img.classes-picture{
   box-sizing: border-box;
   max-width: 320px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-arts:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-arts:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.arts-picture{
   width: 320px;
   height: 220px;
+  transition: 1s ease-in;
+}
+
+.category-pictures-arts-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 105px;
+  font-size: 30px;
+}
+
+span.category-pictures-arts-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 23px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .category-pictures-parties{
@@ -73,10 +210,45 @@ img.arts-picture{
   box-sizing: border-box;
   max-width: 320px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
 }
+
+.category-pictures-parties:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-parties:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
+}
+
 img.parties-picture{
   width: 320px;
   height: 220px;
+  transition: 1s ease-in;
+}
+
+.category-pictures-parties-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 105px;
+  font-size: 30px;
+}
+
+span.category-pictures-parties-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 23px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .category-pictures-music{
@@ -84,11 +256,45 @@ img.parties-picture{
   box-sizing: border-box;
   max-width: 320px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-music:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-music:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.music-picture{
   width: 320px;
   height: 220px;
+  transition: 1s ease-in;
+}
+
+.category-pictures-music-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 105px;
+  font-size: 30px;
+}
+
+span.category-pictures-music-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 23px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
 }
 
 .category-pictures-food{
@@ -96,12 +302,47 @@ img.music-picture{
   flex: .5 .5 600px;
   max-width: 655px;
   height: 220px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.category-pictures-food:hover img{
+  transform: scale(1.4);
+  transition: 1s ease-in;
+  filter: brightness(.5);
+}
+
+.category-pictures-food:hover span{
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 img.food-picture{
   width: 670px;
   height: 220px;
+  transition: 1s ease-in;
 }
+
+.category-pictures-food-title{
+  position: absolute;
+  color: #fff;
+  top: 80px;
+  left: 275px;
+  font-size: 30px;
+}
+
+span.category-pictures-food-description{
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 175px;
+  font-size: 15px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s ease-in;
+}
+
 
 .category-pictures-outer-large{
   width: 670px;
