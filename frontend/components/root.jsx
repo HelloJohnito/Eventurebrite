@@ -10,19 +10,36 @@ import BrowsePageCategory from './pages/browsepage_category';
 import CreatePage from './pages/createpage';
 
 
-const Root = ({ store }) => (
+const Root = ({ store }) => {
+
+  const _ensureLoggedIn = (nextState, replace) => {
+    const currentUser = store.getState().session.currentUser;
+    if (!currentUser) {
+      replace('/');
+    }
+  };
+
+  const _redirectIfLoggedIn = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+    if (currentUser) {
+      replace('/');
+    }
+  };
+
+  return(
   <Provider store={ store }>
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={ HomePage }/>
-        <Route path="/create" component={ CreatePage } />
+        <Route path="/create" component={ CreatePage } onEnter={_ensureLoggedIn} />
         <Route path="/browse" component={ BrowsePageIndex }/>
         <Route path="/browse/:category" component={ BrowsePageCategory }/>
         <Route path="/events/:eventId" component={ ShowPage }/>
       </Route>
     </Router>
   </Provider>
-);
+  );
+};
 
 export default Root;
 

@@ -48,8 +48,6 @@ class Greeting extends React.Component {
 
           <a className="nav-login" onClick={this.handleClick.bind(this, true)}>Log In</a>
 
-          <Link to="/create" className="nav-create-events">Create events</Link>
-
         <Modal
           contentLabel="modal-greeting"
           isOpen={this.state.modalOpen}
