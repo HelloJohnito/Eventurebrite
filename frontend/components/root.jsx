@@ -8,6 +8,7 @@ import ShowPage from './pages/showpage';
 import BrowsePageIndex from './pages/browsepage_index';
 import BrowsePageCategory from './pages/browsepage_category';
 import CreatePage from './pages/createpage';
+import UserPage from './pages/userpage';
 
 
 const Root = ({ store }) => {
@@ -35,6 +36,7 @@ const Root = ({ store }) => {
         <Route path="/browse" component={ BrowsePageIndex }/>
         <Route path="/browse/:category" component={ BrowsePageCategory }/>
         <Route path="/events/:eventId" component={ ShowPage }/>
+        <Route path="/user" component={ UserPage }/>
       </Route>
     </Router>
   </Provider>

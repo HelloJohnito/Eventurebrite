@@ -1,5 +1,10 @@
 class Api::TicketsController < ApplicationController
 
+  def index
+    @tickets = current_user.tickets
+    render 'api/tickets'
+  end
+
   def create
     @ticket = Ticket.new(ticket_params)
     @ticket.user_id = current_user.id
