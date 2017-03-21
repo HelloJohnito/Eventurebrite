@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 
 
+
 class EventForm extends React.Component {
   constructor(props){
     super(props);
@@ -18,6 +19,19 @@ class EventForm extends React.Component {
   //   }
   // }
 
+
+  uploadImage(e){
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      window.cloudinary_options,
+      (error, images) => {
+        if (error === null){
+          this.setState({image_url: images[0].url});
+        }
+      }
+    );
+  }
+
   componentDidMount(){
     this.props.fetchAllCategories();
   }
@@ -33,6 +47,7 @@ class EventForm extends React.Component {
     e.preventDefault();
     this.props.createDetailEvent(this.state);
   }
+
 
   renderErrors() {
     return(
@@ -84,7 +99,7 @@ class EventForm extends React.Component {
                 ))}
               </select>
 
-            <label className="event-form-upload-image">Upload Image</label>
+            <button className="event-form-upload-image" onClick={this.uploadImage.bind(this)}>Upload Image</button>
 
             <input className="event-form-submit-button" type="submit" value="Make Event Live"/>
 

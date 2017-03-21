@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
 
-window.store = configureStore()
+window.store = configureStore();
 
 document.addEventListener('DOMContentLoaded', () => {
   Modal.setAppElement(document.body);

@@ -13,8 +13,9 @@ h1.event-form-header {
 .event-form-inner{
   display: flex;
   flex-direction: column;
-  // background-color: lightblue;
-  width: 700px;
+  background-color: lightblue;
+  width: 1000px;
+  margin: auto;
 }
 
 .event-form-title{
