@@ -35,7 +35,7 @@ class Api::EventsController < ApplicationController
 
     if @event.save
       CategoryListing.create(category_id: params[:event][:category_id].to_i, event_id: @event.id)
-      # @event.category_ids = [params[:category_id]]
+      # @event.category_ids = [params[:events][:category_id]]
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422
