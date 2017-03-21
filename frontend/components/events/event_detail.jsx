@@ -29,7 +29,7 @@ class EventDetail extends React.Component {
             <p className="detail-event-date">{this.props.event.date}</p>
             <h1 className="detail-event-title">{this.props.event.title}</h1>
             <p className="detail-event-user">By: {this.capitalize(this.props.event.user.username)}</p>
-            <p className="detail-event-price">price here</p>
+            <p className="detail-event-price">{this.props.event.price}</p>
           </div>
         </div>
 
