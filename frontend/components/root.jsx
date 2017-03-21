@@ -7,6 +7,7 @@ import HomePage from './pages/homepage';
 import ShowPage from './pages/showpage';
 import BrowsePageIndex from './pages/browsepage_index';
 import BrowsePageCategory from './pages/browsepage_category';
+import CreatePage from './pages/createpage';
 
 
 const Root = ({ store }) => (
@@ -14,6 +15,7 @@ const Root = ({ store }) => (
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={ HomePage }/>
+        <Route path="/create" component={ CreatePage } />
         <Route path="/browse" component={ BrowsePageIndex }/>
         <Route path="/browse/:category" component={ BrowsePageCategory }/>
         <Route path="/events/:eventId" component={ ShowPage }/>

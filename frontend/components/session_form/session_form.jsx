@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
   // }
 
   handleDemo(e){
-    e.preventDefault();
+    // e.preventDefault();
     this.props.processDemo({username: "john", password: "password"});
     this.demo = true;
   }
@@ -67,7 +67,6 @@ class SessionForm extends React.Component {
         <br/>
         <h1 className="form-option"></h1>
         <form className="session-form" onSubmit={this.handleSubmit}>
-          <div>
 
             <div className="session-error">
               {this.renderErrors()}
@@ -88,11 +87,13 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
+
             <input className="form-submit" type="submit" value="Submit" />
 
-          </div>
-          <a className="session-demo" onClick={this.handleDemo.bind(this)}>Demo</a>
+
+            <a className="session-demo" onClick={this.handleDemo.bind(this)}>Demo</a>
         </form>
+
       </div>
     );
   }

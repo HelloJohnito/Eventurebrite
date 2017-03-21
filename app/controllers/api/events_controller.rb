@@ -29,10 +29,13 @@ class Api::EventsController < ApplicationController
   end
 
   def create
+
     @event = Event.new(event_params)
     @event.user_id = current_user.id
+
     if @event.save
-      #CategoryListing.create(category_id: ??, event_id: @event.id)
+      CategoryListing.create(category_id: params[:event][:category_id].to_i, event_id: @event.id)
+      # @event.category_ids = [params[:category_id]]
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422

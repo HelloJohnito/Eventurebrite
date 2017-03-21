@@ -8,6 +8,16 @@ h1.form-option{
   text-align: center;
 }
 
+form.session-form{
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+// .session-layout{
+//   height: 200px;
+// }
+
 input.form-input{
   box-sizing: border-box;
   border-radius: 3px;
@@ -22,8 +32,8 @@ input.form-submit{
   border-radius: 3px;
   width: 100%;
   text-align: center;
-  margin-top: 5px;
   padding: 10px;
+  padding-bottom: 27px;
   border: 1px solid $lightgrey;
   box-sizing: border-box;
 }
@@ -34,8 +44,10 @@ a.session-demo{
   border-radius: 3px;
   width: 100%;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
+  padding-left: 100px;
+  padding-right: 106px;
   border: 1px solid $lightgrey;
   box-sizing: border-box;
 }

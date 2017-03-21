@@ -36,7 +36,7 @@ class Greeting extends React.Component {
           <Link to= '/browse' className="nav-browse">Browse Events</Link>
           <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
           <h1 className="nav-username">{this.props.currentUser.username}</h1>
-          <a className="nav-create-events">Create events</a>
+          <Link to="/create" className="nav-create-events">Create events</Link>
         </div>);
     }
     else{
@@ -48,7 +48,7 @@ class Greeting extends React.Component {
 
           <a className="nav-login" onClick={this.handleClick.bind(this, true)}>Log In</a>
 
-          <a className="nav-create-events">Create events</a>
+          <Link to="/create" className="nav-create-events">Create events</Link>
 
         <Modal
           contentLabel="modal-greeting"
