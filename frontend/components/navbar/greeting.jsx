@@ -35,7 +35,7 @@ class Greeting extends React.Component {
         <div className="nav-right">
           <Link to= '/browse' className="nav-browse">Browse Events</Link>
           <button className="nav-logout" onClick={this.props.logout}>Log Out</button>
-          <h1 className="nav-username">{this.props.currentUser.username}</h1>
+          <Link to="/user" className="nav-username">{this.props.currentUser.username}</Link>
           <Link to="/create" className="nav-create-events">Create events</Link>
         </div>);
     }

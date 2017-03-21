@@ -43,10 +43,14 @@ button.nav-logout:hover{
   background-color: $lightgrey;
 }
 
-h1.nav-username{
+.nav-username{
   border-left: 1px solid #D2D6DF;
   font-size: 14px;
   padding: 20px;
+}
+
+.nav-username:hover{
+  background-color: $lightgrey;
 }
 
 a.nav-signup{
