@@ -12,11 +12,11 @@ export const fetchTicket = (id) => (
   })
 );
 
-export const createTicket = (ticket) => (
+export const createTicket = (eventId) => (
   $.ajax({
     method: "POST",
     url: "api/tickets",
-    data: { ticket }
+    data: { eventId }
   })
 );
 

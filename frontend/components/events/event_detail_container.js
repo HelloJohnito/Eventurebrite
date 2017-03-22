@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import EventDetail from './event_detail';
 import { fetchDetailEvent } from "../../actions/event_actions";
-
+import { createTicket } from "../../actions/ticket_actions";
 
 const mapStateToProps = (state, ownProps) => ({
   event: state.eventDetail,
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchDetailEvent: (id) => dispatch(fetchDetailEvent(id))
+  fetchDetailEvent: (id) => dispatch(fetchDetailEvent(id)),
+  createTicket: (eventId) => dispatch(createTicket(eventId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventDetail);

@@ -6,8 +6,10 @@ class Api::TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.new(ticket_params)
+    @ticket = Ticket.new
+    @ticket.even_id = params[:ticket][:eventId]
     @ticket.user_id = current_user.id
+    #Check here
     if @ticket.save
       render "api/tickets/show"
     else
@@ -21,7 +23,7 @@ class Api::TicketsController < ApplicationController
     render "api/tickets/show"
   end
 
-  def ticket_params
-    params.require(:ticket).permit(:event_id)
-  end
+  # def ticket_params
+  #   params.require(:ticket).permit(:event_id)
+  # end
 end

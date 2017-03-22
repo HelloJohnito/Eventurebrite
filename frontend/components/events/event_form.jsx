@@ -97,7 +97,7 @@ class EventForm extends React.Component {
             <input className="event-form-price" type="text" value={this.state.price} onChange={this.update("price")} placeholder="Price"></input>
             </label>
 
-            <label>Categories
+            <label>Category
               <br/>
               <select className="event-form-categories-selector" defaultValue="" onChange={this.update("category_id")}>
 
@@ -131,3 +131,20 @@ class EventForm extends React.Component {
 
 
 export default EventForm;
+
+
+// <select className="event-form-categories-selector" defaultValue="" onChange={this.update("category_id")}>
+//
+//   <option value="" disabled="true">Select Category</option>
+//
+//   {this.props.categories.map( category => (
+//     <option key={category.id} value={category.id}>{category.category}</option>
+//   ))}
+// </select>
+
+
+// {this.props.categories.map( category => {
+//   <label>{category.category}
+//     <input type="checkbox" />
+//   </label>;
+// })}
