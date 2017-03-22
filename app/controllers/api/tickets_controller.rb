@@ -9,7 +9,6 @@ class Api::TicketsController < ApplicationController
     @ticket = Ticket.new(ticket_params)
     @ticket.event_id = params[:ticket][:eventId]
     @ticket.user_id = current_user.id
-    debugger
     if @ticket.save
       render "api/tickets/show"
     else

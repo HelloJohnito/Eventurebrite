@@ -11,10 +11,12 @@ class UserPage extends React.Component {
   render(){
     return(
       <div>
-        <UserContainer />
+        <UserContainer route={this.props.route.path} />
       </div>
     );
   }
 }
 
 export default UserPage;
+
+// console.log(this.props.route.path)

@@ -38,7 +38,9 @@ const Root = ({ store }) => {
         <Route path="/browse" component={ BrowsePageIndex }/>
         <Route path="/browse/:category" component={ BrowsePageCategory }/>
         <Route path="/events/:eventId" component={ ShowPage }/>
-        <Route path="/user" component={ UserPage }/>
+        <Route path="/user" component={ UserPage } />
+        <Route path="/user/:tickets" component={ UserPage } />
+        <Route path="/user/:bookmarks" component={ UserPage } />
       </Route>
     </Router>
   </Provider>

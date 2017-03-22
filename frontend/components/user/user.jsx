@@ -1,14 +1,29 @@
 import React from 'react';
 import UserEventsList from './user_events_list';
-
+import UserTicketsList from './user_tickets_list';
+import UserBookmarksList from './user_bookmark_list';
 
 class User extends React.Component {
+
+  currentUserInfo(){
+    // console.log(this.props.route)
+    if(this.props.route === "/user"){
+      return <UserEventsList currentUser={this.props.currentUser} />;
+    }
+    else if(this.props.route === `/user/:tickets`){
+      return <UserTicketsList currentUser={this.props.currentUser} />;
+    }
+    else if(this.props.route === `/user/:bookmarks`){
+      return <UserBookmarksList currentUser={this.props.currentUser} />;
+    }
+  }
 
   render(){
     return(
       <div>
         <h1>Welcome {this.props.currentUser.username}!</h1>
-        <UserEventsList currentUser={this.props.currentUser} />
+
+        {this.currentUserInfo()}
       </div>
     );
   }

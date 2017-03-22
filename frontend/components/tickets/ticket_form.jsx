@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 
 class TicketForm extends React.Component {
   constructor(props){
@@ -12,7 +13,7 @@ class TicketForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createTicket(this.state);
+    this.props.createTicket(this.state).then(hashHistory.push('/user/tickets'));
   }
 
   render(){

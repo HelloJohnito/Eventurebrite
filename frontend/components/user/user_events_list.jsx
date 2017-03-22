@@ -5,7 +5,11 @@ const UserEventsList = (props) => (
   <div>
     <ui>
       {props.currentUser.events.map( (event, id) => (
-        <Link to={`/events/${event.id}`} key={id}>{event.title}</Link>
+        <li key={id}>
+          <Link to={`/events/${event.id}`} key={id}>
+            {event.title}
+           </Link>
+        </li>
       ))}
     </ui>
   </div>
