@@ -13,10 +13,7 @@
 class User < ApplicationRecord
   has_many :events
   has_many :tickets
-
-  has_many :bookmarks,
-    through: :events,
-    source: :bookmarks
+  has_many :bookmarks
 
 
   validates :username, :password_digest, :session_token, presence: true

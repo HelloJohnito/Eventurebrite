@@ -10,9 +10,8 @@ class Api::BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
+    @bookmark.user_id = current_user.id
 
-    # @bookmark.event_id = params[:bookmark][:eventId]
-    # current_user.bookmarks = @bookmark.id
     if @bookmark.save
       render 'api/bookmarks'
     else
@@ -20,9 +19,10 @@ class Api::BookmarksController < ApplicationController
     end
   end
 
-  # how to remove from user.bookmarks
   def destroy
-    
+    @bookmark.find(params[:id])
+    @bookmark.destroy
+    render "api/tickets/show"
   end
 
   def bookmark_params
