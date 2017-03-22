@@ -8,7 +8,6 @@ import { ModalStyle } from '../modal/modal_style';
 class EventDetail extends React.Component {
   constructor(props){
     super(props);
-    this.login = this.props.currentUser === null ? false : true;
     this.onModalClose = this.onModalClose.bind(this);
     this.state = { modalOpen: false };
   }
@@ -59,10 +58,10 @@ class EventDetail extends React.Component {
       return <div>Loading</div>;
     }
 
-    let content = (this.login) ? <TicketForm /> : <SessionFormContainer formType="login" />;
+    let content = (this.props.currentUser !== null) ? <TicketForm /> : <SessionFormContainer formType="login" />;
 
     let ticketOrEditButton;
-    if (this.login){
+    if (this.props.currentUser !== null){
       ticketOrEditButton = this.checkUserEvent();
     }
     else{
