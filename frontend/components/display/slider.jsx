@@ -29,16 +29,16 @@ class SliderImage extends React.Component {
   render(){
     return (
       <div id="slideshow">
-        <div>
+        <div className="slide-border">
           <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490025934/snowboard_m1qzhp.jpg"/>
         </div>
-        <div>
+        <div className="slide-border">
           <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026685/concert_su3a20.jpg"/>
         </div>
-        <div>
+        <div className="slide-border">
           <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026763/surf_q1ljog.jpg"/>
         </div>
-        <div>
+        <div className="slide-border">
           <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026930/fireworks_ec9foi.jpg"/>
         </div>
       </div>

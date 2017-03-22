@@ -17,10 +17,12 @@ class EventDetail extends React.Component {
     this.props.fetchDetailEvent(this.props.eventId);
   }
 
-  // componentWillReceiveProps(newProps){
-  //   this.setState({modalOpen: false});
-  // }
-  //
+  componentWillReceiveProps(nextProps){
+    if(this.props.eventId !== nextProps.eventId){
+    this.props.fetchDetailEvent(nextProps.eventId);
+    // this.setState({modalOpen: false});
+  }}
+
   handleTicket(){
     this.setState({modalOpen: true});
   }
@@ -50,6 +52,7 @@ class EventDetail extends React.Component {
       return <p className="detail-event-ticket" onClick={this.handleTicket.bind(this)}>Ticket</p>;
     }
   }
+
 
   render() {
 
