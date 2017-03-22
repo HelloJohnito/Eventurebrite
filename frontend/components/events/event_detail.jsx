@@ -8,7 +8,7 @@ import { ModalStyle } from '../modal/modal_style';
 class EventDetail extends React.Component {
   constructor(props){
     super(props);
-    this.login = this.props.session.currentUser === null ? false : true;
+    this.login = this.props.currentUser === null ? false : true;
     this.onModalClose = this.onModalClose.bind(this);
     this.state = { modalOpen: false };
   }
@@ -45,7 +45,7 @@ class EventDetail extends React.Component {
   }
 
   checkUserEvent(){
-    if (this.props.session.currentUser.id === this.props.event.user.id){
+    if (this.props.currentUser.id === this.props.event.user.id){
       return <p className="detail-event-edit" onClick={this.handleEdit(this.props.eventId)}>Edit</p>;
     }
     else{
@@ -55,7 +55,6 @@ class EventDetail extends React.Component {
 
 
   render() {
-
     if(!this.props.event.user){
       return <div>Loading</div>;
     }
