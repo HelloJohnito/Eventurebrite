@@ -15,8 +15,8 @@ export const fetchTicket = (id) => dispatch => (
   ))
 );
 
-export const createTicket = (eventId) => dispatch => (
-  APIUtil.createTicket(eventId).then( ticket => (
+export const createTicket = (ticket) => dispatch => (
+  APIUtil.createTicket(ticket).then( ticket => (
     dispatch(receiveTicket(ticket))
   ))
 );

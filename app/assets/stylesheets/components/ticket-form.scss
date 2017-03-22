@@ -1,11 +1,41 @@
+.ticket-purchase{
+  margin-top: 25px;
+  padding-bottom: 3px;
+  font-size: 20px;
+  border-bottom: 1px solid $lightgrey;
+  text-align: center;
+}
 
+.ticket-title{
+  font-size: 18px;
+  margin-top: 30px;
+}
 
+.ticket-price{
+  margin-top: 5px;
+}
+
+.ticket-outer-input{
+  margin-top: 20px;
+  text-align: center;
+}
 
 .ticket-quantity {
+  margin-top: 20px;
   border: 1px solid black;
   border-radius: 3px;
+  width: 120px;
+  height: 25px;
 }
 
 .ticket-form-submit-button {
-
+  margin-top: 30px;
+  background-color: $green;
+  color: $white;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid $lightgrey;
+  box-sizing: border-box;
 }

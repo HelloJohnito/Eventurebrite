@@ -1,6 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-import TicketForm from '../tickets/ticket_form';
+import TicketFormContainer from '../tickets/ticket_form_container';
 import SessionFormContainer from '../session_form/session_form_container';
 import Modal from 'react-modal';
 import { ModalStyle } from '../modal/modal_style';
@@ -58,7 +58,7 @@ class EventDetail extends React.Component {
       return <div>Loading</div>;
     }
 
-    let content = (this.props.currentUser !== null) ? <TicketForm /> : <SessionFormContainer formType="login" />;
+    let content = (this.props.currentUser !== null) ? <TicketFormContainer/> : <SessionFormContainer formType="login" />;
 
     let ticketOrEditButton;
     if (this.props.currentUser !== null){
