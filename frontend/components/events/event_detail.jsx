@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { hashHistory } from 'react-router';
 
 class EventDetail extends React.Component {
   constructor(props){
@@ -10,14 +10,32 @@ class EventDetail extends React.Component {
     this.props.fetchDetailEvent(this.props.eventId);
   }
 
+  handleEdit(id){
+    return () => (hashHistory.push(`/edit/${id}`));
+  }
+
+  handleTicket(){
+
+  }
+
   capitalize(name){
     return name[0].toUpperCase() + name.slice(1);
   }
 
   render() {
+    // console.log(this.props.session.currentUser.id)
     if(!this.props.event.user){
       return <div>Loading</div>;
     }
+
+    let ticketOrEditButton;
+    if (this.props.session.currentUser.id === this.props.event.user.id){
+      ticketOrEditButton = <p className="detail-event-edit" onClick={this.handleEdit(this.props.eventId)}>Edit</p>;
+    }
+    else {
+      ticketOrEditButton = <p className="detail-event-ticket">Ticket</p>;
+    }
+
     return (
       <div className="detail-event-info">
 
@@ -33,10 +51,12 @@ class EventDetail extends React.Component {
           </div>
         </div>
 
+
         <div className="detail-event-detail-middle">
           <p className="detail-event-bookmark">BM</p>
-          <p className="detail-event-ticket">ticket</p>
+          {ticketOrEditButton}
         </div>
+
 
         <div className="detail-event-detail-bottom">
           <p className="detail-event-description">

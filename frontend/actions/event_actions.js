@@ -11,20 +11,22 @@ export const fetchAllEvents = (limit) => dispatch => (
   ApiUtil.fetchEvents(limit).then( events => dispatch(receiveAllEvents(events)))
 );
 
-export const fetchDetailEvent = (id) => dispatch => (
+export const fetchDetailEvent = (id) => dispatch => {
+  return (
   ApiUtil.fetchEvent(id).then( event => dispatch(receiveDetailEvent(event)),
   err => dispatch(receiveErrors(err.responseJSON)))
-);
+)};
 
 export const createDetailEvent = (event) => dispatch => (
   ApiUtil.createEvent(event).then( event => dispatch(receiveNewEvent(event)),
   err => dispatch(receiveErrors(err.responseJSON)))
 );
 
-export const upateDetailEvent = (event) => dispatch => (
-  ApiUtil.updateEvent(event).then( event => dispatch(receiveDetailEvent(event))
-  .then(hashHistory.push(`/events/${event.id}`))
-));
+export const updateDetailEvent = (event) => dispatch => {
+  return (
+    ApiUtil.updateEvent(event).then( event => dispatch(receiveDetailEvent(event))
+  ));
+};
 
 export const filterByCategory = (limit, category) => dispatch => (
   ApiUtil.filterByCategory(limit, category).then( events => dispatch(receiveAllEvents(events)))

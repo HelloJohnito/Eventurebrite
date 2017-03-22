@@ -6,7 +6,7 @@ import { Link, hashHistory } from 'react-router';
 class EventForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = { title: "", description: "", price: "", date: "", location: "", image_url: "", category_id: ""};
+    this.state = this.props.event;
   }
 
   // componentDidUpdate(){
@@ -18,6 +18,13 @@ class EventForm extends React.Component {
   //     this.props.router.push("/");
   //   }
   // }
+
+  componentDidMount(){
+    if(this.props.formType === "edit"){
+      this.props.fetchDetailEvent(this.props.eventId).then(res => this.setState(res.event));
+    }
+    this.props.fetchAllCategories();
+  }
 
 
   uploadImage(e){
@@ -32,11 +39,6 @@ class EventForm extends React.Component {
     );
   }
 
-  componentDidMount(){
-    this.props.fetchAllCategories();
-  }
-
-
   update(field){
     return e => (
       this.setState({[field]: e.currentTarget.value})
@@ -45,11 +47,10 @@ class EventForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createDetailEvent(this.state).then( success => hashHistory.push(`/events/${success.event.id}`));
+    this.props.action(this.state).then( success => hashHistory.push(`/events/${success.event.id}`));
   }
 
-
-  renderErrors() {
+  renderErrors(){
     return(
       <ul>
         {this.props.errors.map((error, i) => (
@@ -61,13 +62,14 @@ class EventForm extends React.Component {
     );
   }
 
+
   render(){
-    // console.log("")
-    // console.log(this.props)
+
+    let text = this.props.formType === "new" ? "Create New Event" : "Update Event";
     return(
       <div className="event-form-outer">
 
-        <h1 className="event-form-header">Create New Event</h1>
+        <h1 className="event-form-header">{text}</h1>
 
         <div className="event-form-middle">
 
@@ -77,22 +79,22 @@ class EventForm extends React.Component {
 
             <label>Title
             <br/>
-            <input className="event-form-title" type="text" onChange={this.update("title")} placeholder="Title"></input>
+            <input className="event-form-title" type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"></input>
             </label>
 
             <label>Location
             <br/>
-            <input className="event-form-location" type="text" onChange={this.update("location")} placeholder="Location"></input>
+            <input className="event-form-location" type="text" value={this.state.location} onChange={this.update("location")} placeholder="Location"></input>
             </label>
 
             <label>Date
             <br/>
-            <input className="event-form-date" type="date" onChange={this.update("date")} placeholder="Date"></input>
+            <input className="event-form-date" type="date" value={this.state.date} onChange={this.update("date")} placeholder="Date"></input>
             </label>
 
             <label>Price
             <br/>
-            <input className="event-form-price" type="text" onChange={this.update("price")} placeholder="Price"></input>
+            <input className="event-form-price" type="text" value={this.state.price} onChange={this.update("price")} placeholder="Price"></input>
             </label>
 
             <label>Categories
@@ -109,7 +111,7 @@ class EventForm extends React.Component {
 
             <label>Description
             <br/>
-            <textarea className="event-form-description" onChange={this.update("description")} placeholder="Description"></textarea>
+            <textarea className="event-form-description" value={this.state.title} onChange={this.update("description")} placeholder="Description"></textarea>
             </label>
 
             <div className="event-form-upload-image-outer">

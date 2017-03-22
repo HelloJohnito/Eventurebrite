@@ -92,6 +92,18 @@ p.detail-event-user{
   cursor: pointer;
 }
 
+.detail-event-edit{
+  background-color: $green;
+  color: white;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 355px;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 //bottom
 .detail-event-detail-bottom{
   display: flex;

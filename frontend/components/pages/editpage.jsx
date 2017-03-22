@@ -2,7 +2,7 @@ import React from 'react';
 import EventFormContainer from '../events/event_form_container';
 
 
-class CreatePage extends React.Component {
+class EditPage extends React.Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -11,11 +11,13 @@ class CreatePage extends React.Component {
   render(){
     return(
       <div>
-        <EventFormContainer formType="new" />
+        <EventFormContainer formType="edit" eventId={this.props.params.eventId} />
       </div>
     );
   }
 }
 
 
-export default CreatePage;
+export default EditPage;
+
+//will needthe scroll up

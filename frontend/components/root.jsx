@@ -8,6 +8,7 @@ import ShowPage from './pages/showpage';
 import BrowsePageIndex from './pages/browsepage_index';
 import BrowsePageCategory from './pages/browsepage_category';
 import CreatePage from './pages/createpage';
+import EditPage from './pages/editpage';
 import UserPage from './pages/userpage';
 
 
@@ -33,6 +34,7 @@ const Root = ({ store }) => {
       <Route path="/" component={ App }>
         <IndexRoute component={ HomePage }/>
         <Route path="/create" component={ CreatePage } onEnter={_ensureLoggedIn} />
+        <Route path="/edit/:eventId" component={ EditPage } onEnter={_ensureLoggedIn} />
         <Route path="/browse" component={ BrowsePageIndex }/>
         <Route path="/browse/:category" component={ BrowsePageCategory }/>
         <Route path="/events/:eventId" component={ ShowPage }/>

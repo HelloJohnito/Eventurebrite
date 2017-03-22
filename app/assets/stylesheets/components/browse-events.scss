@@ -28,10 +28,10 @@ ul.browse-events-inner {
 li.browse-event {
   // flex: .5 .5 500px;
   // height: auto;
-
+  box-sizing: border-box;
   height: 160px;
-  width: 900px;
-  margin: 30px 30px;
+  width: 850px;
+  margin: 30px 0px 30px 20px;
   border: 1px solid $lightgrey;
   box-shadow: 3px #888888;
 }
@@ -47,11 +47,12 @@ li.browse-event {
 
 .browse-event-info {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 12px 5px 12px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   background: $white;
+  border-bottom: 1px solid $lightgrey;
 }
 
 .browse-event-info-top {

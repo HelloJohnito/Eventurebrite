@@ -5,6 +5,7 @@ import { fetchDetailEvent } from "../../actions/event_actions";
 
 const mapStateToProps = (state, ownProps) => ({
   event: state.eventDetail,
+  session: state.session,
   eventId: ownProps.eventId
 });
 

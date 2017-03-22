@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { Link } from 'react-router';
 
 const UserEventsList = (props) => (
   <div>
     <ui>
       {props.currentUser.events.map( (event, id) => (
-        <li key={id}>{event.title}</li>
+        <Link to={`/events/${event.id}`} key={id}>{event.title}</Link>
       ))}
     </ui>
   </div>
