@@ -16,7 +16,7 @@ class TicketForm extends React.Component {
             <input type="number" className="ticket-quantity" />
           </label>
 
-          <input submit="submit" class="ticket-form-submit-button" />
+          <input type="submit" className="ticket-form-submit-button" />
         </form>
       </div>
     );
