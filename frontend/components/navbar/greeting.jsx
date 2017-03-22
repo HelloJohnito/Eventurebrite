@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Modal from 'react-modal';
 import SessionFormContainer from '../session_form/session_form_container';
-import { ModalStyle } from './modal_style';
+import { ModalStyle } from '../modal/modal_style';
 
 //props has currentuser: username, bookmarks, events, tickets
 class Greeting extends React.Component {
