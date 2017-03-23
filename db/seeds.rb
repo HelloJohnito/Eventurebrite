@@ -34,7 +34,7 @@ e10 = Event.create(title: "Party International", description: "Are you bored on 
 Category.destroy_all
 arts = Category.create(category: "arts")
 classes = Category.create(category: "classes")
-food = Category.create(category: "food and drink")
+food = Category.create(category: "food")
 music = Category.create(category: "music")
 networking = Category.create(category: "networking")
 parties = Category.create(category: "parties")

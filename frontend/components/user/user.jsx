@@ -5,6 +5,9 @@ import { Link } from 'react-router';
 
 class User extends React.Component {
 
+  componentDidMount(){
+    
+  }
 
   currentUserInfo(){
     // console.log(this.props.route)

@@ -8,6 +8,7 @@ const CategorySidebar = () => (
 
       <li className="category-arts"><Link to='/browse/arts'>Arts</Link></li>
       <li className="category-classes"><Link to='/browse/classes'>Classes</Link></li>
+      <li className="category-food"><Link to='/browse/food'>Food</Link></li>
       <li className="category-music"><Link to='/browse/music'>Music</Link></li>
       <li className="category-networking"><Link to='/browse/networking'>Networking</Link></li>
       <li className="category-parties"><Link to='/browse/parties'>Parties</Link></li>
