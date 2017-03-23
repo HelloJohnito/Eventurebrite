@@ -20,9 +20,17 @@ class User extends React.Component {
 
   render(){
     return(
-      <div>
-        <h1>Welcome {this.props.currentUser.username}!</h1>
-
+      <div className="user-page">
+        <div className="user-top">
+          <div className="user-top-outer">
+            <h1 className="user-name">Welcome {this.props.currentUser.username}!</h1>
+          </div>
+          <div className="user-middle-outer">
+            <div>testing</div>
+            <div>testing2</div>
+            <div>testing3</div>
+          </div>
+        </div>
         {this.currentUserInfo()}
       </div>
     );
