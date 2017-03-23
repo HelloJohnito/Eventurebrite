@@ -15,7 +15,7 @@ const EventsIndexItem = (props) => (
           <div className="index-event-location">{props.location}</div>
         </div>
         <div className="index-event-info-bottom">
-          <div className="index-event-category">category wll be here</div>
+          <div className="index-event-category">{props.categories}</div>
           <div className="index-event-bookmark-icon">BM</div>
         </div>
       </div>
