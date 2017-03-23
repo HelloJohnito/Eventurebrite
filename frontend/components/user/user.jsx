@@ -2,6 +2,8 @@ import React from 'react';
 import UserEventsList from './user_events_list';
 import UserTicketsList from './user_tickets_list';
 import UserBookmarksList from './user_bookmark_list';
+import { Link } from 'react-router';
+
 
 class User extends React.Component {
 
@@ -26,9 +28,9 @@ class User extends React.Component {
             <h1 className="user-name">Welcome {this.props.currentUser.username}!</h1>
           </div>
           <div className="user-middle-outer">
-            <div>testing</div>
-            <div>testing2</div>
-            <div>testing3</div>
+            <Link to="/user" className="user-events">testing</Link>
+            <Link to="/user/tickets" className="user-tickets">testing2</Link>
+            <Link to="/user/bookmarks" className="user-bookmarks">testing3</Link>
           </div>
         </div>
         {this.currentUserInfo()}
