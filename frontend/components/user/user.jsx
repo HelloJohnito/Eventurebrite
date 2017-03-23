@@ -1,26 +1,39 @@
 import React from 'react';
-import UserEventsList from './user_events_list';
-import UserTicketsList from './user_tickets_list';
-import UserBookmarksList from './user_bookmark_list';
+import UserList from './user_list';
 import { Link } from 'react-router';
 
 
 class User extends React.Component {
 
+
   currentUserInfo(){
     // console.log(this.props.route)
     if(this.props.route === "/user"){
-      return <UserEventsList currentUser={this.props.currentUser} />;
+      return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }
-    else if(this.props.route === `/user/:tickets`){
-      return <UserTicketsList currentUser={this.props.currentUser} />;
+    else if(this.props.route === `/user/tickets`){
+      return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }
-    else if(this.props.route === `/user/:bookmarks`){
-      return <UserBookmarksList currentUser={this.props.currentUser} />;
+    else if(this.props.route === `/user/bookmarks`){
+      return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }
   }
 
+
   render(){
+
+    let userEvents = "user-events";
+    let userTickets = "user-tickets";
+    let userBookmarks = "user-bookmarks";
+
+    if (this.props.route === "/user") {
+      userEvents = "user-events-selected";
+    } else if (this.props.route === "/user/tickets"){
+      userTickets = "user-tickets-selected";
+    } else if (this.props.route === "/user/bookmarks"){
+      userBookmarks = "user-bookmarks-selected";
+    }
+
     return(
       <div className="user-page">
         <div className="user-top">
@@ -28,9 +41,12 @@ class User extends React.Component {
             <h1 className="user-name">Welcome {this.props.currentUser.username}!</h1>
           </div>
           <div className="user-middle-outer">
-            <Link to="/user" className="user-events">testing</Link>
-            <Link to="/user/tickets" className="user-tickets">testing2</Link>
-            <Link to="/user/bookmarks" className="user-bookmarks">testing3</Link>
+
+            <Link to="/user" className={userEvents}>Events by: {this.props.currentUser.username}</Link>
+
+            <Link to="/user/tickets" className={userTickets}>Upcoming Events</Link>
+
+            <Link to="/user/bookmarks" className={userBookmarks}>Saved Events</Link>
           </div>
         </div>
         {this.currentUserInfo()}
