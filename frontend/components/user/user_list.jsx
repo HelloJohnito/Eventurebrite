@@ -1,6 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+const unique = (events) => {
+  let uniq = [];
+  let check = [];
+  for(let i = 0; i < events.length; i++ ){
+    if(check.indexOf(events[i].id) === -1){
+      uniq.push(events[i]);
+    }
+    check.push(events[i].id);
+  }
+
+  return uniq;
+};
+
 
 const UserList = (props) => {
   // console.log(props);
@@ -10,13 +23,15 @@ const UserList = (props) => {
     events = props.currentUser.events;
   }
   else if(props.route === `/user/tickets`){
-    events = props.currentUser.joined_events;
+    events = unique(props.currentUser.joined_events);
+    console.log(events)
   }
   else if(props.route === `/user/bookmarks`){
     events = props.currentUser.bookmarked_events;
   }
 
   // console.log(props)
+
 
   return (
     <div className="user-list-outer">

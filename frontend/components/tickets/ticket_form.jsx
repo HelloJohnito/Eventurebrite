@@ -13,7 +13,7 @@ class TicketForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createTicket(this.state).then(hashHistory.push('/user/tickets')); //ask here
+    this.props.createTicket(this.state).then(hashHistory.push('/user/tickets')); 
   }
 
   render(){

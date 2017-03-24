@@ -32,13 +32,13 @@ e11 = Event.create(title: "Party International", description: "Are you bored on 
 
 
 # # arts
-# e12 = Event.create(title: "Art for kids!", description: "Art for kids is a one day event for all kids ages 4 and up! We will be drawing spirit animals for the first half and then anything you want for the second half! We will have teachers around assissting kids on their drawings! Sign up your kids today to save seats!", user_id: jenny.id, price: "$20", date: Date.new(2018, 1, 27), location: "Seattle", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490303127/summerarts2015-IMG_9147-cropped-700x350_rtftms.png"))
-#
-# e13 = Event.create(title: "Creating Your Own Ceramic Art", description: "Join us for a peaceful session of creating your own Ceramic art! A greate way to unwind and reset for the new week! Session will be 4 hours long where we will go over different shapes to form your arts to! All ages are welcome! We have a section for kids too!", user_id: brandon.id, price: "$30", date: Date.new(2018, 1, 27), location: "New York", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490308446/Chuma-Maweni-567_v37kpm.jpg"))
-#
-# e14 = Event.create(title: "", description: "", user_id: , price: "$30", date: Date.new(2018, 2, 1), location: "Los Angeles", image_url: ""))
-#
-# e15 = Event.create(title: "", description: "", user_id: , price: "$70", date: Date.new(2018, 2, 2), location: "San Diego", image_url: ""))
+e12 = Event.create(title: "Art for kids!", description: "Art for kids is a one day event for all kids ages 4 and up! We will be drawing spirit animals for the first half and then anything you want for the second half! We will have teachers around assissting kids on their drawings! Sign up your kids today to save seats!", user_id: jenny.id, price: "$20", date: Date.new(2018, 1, 27), location: "Seattle", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490303127/summerarts2015-IMG_9147-cropped-700x350_rtftms.png"))
+
+e13 = Event.create(title: "Creating Your Own Ceramic Art", description: "Join us for a peaceful session of creating your own Ceramic art! A greate way to unwind and reset for the new week! Session will be 4 hours long where we will go over different shapes to form your arts to! All ages are welcome! We have a section for kids too!", user_id: brandon.id, price: "$30", date: Date.new(2018, 1, 27), location: "New York", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490308446/Chuma-Maweni-567_v37kpm.jpg"))
+
+e14 = Event.create(title: "", description: "", user_id: , price: "$30", date: Date.new(2018, 2, 1), location: "Los Angeles", image_url: ""))
+
+e15 = Event.create(title: "", description: "", user_id: , price: "$70", date: Date.new(2018, 2, 2), location: "San Diego", image_url: ""))
 #
 # #classes
 #
