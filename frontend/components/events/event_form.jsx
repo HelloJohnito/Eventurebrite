@@ -19,6 +19,7 @@ class EventForm extends React.Component {
 
 
   uploadImage(e){
+    
     e.preventDefault();
     cloudinary.openUploadWidget(
       window.cloudinary_options,
