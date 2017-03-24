@@ -229,5 +229,12 @@ cl33 = CategoryListing.create(category_id: networking.id, event_id: e33.id)
 #arts
 
 Ticket.destroy_all
+Ticket.create(user_id: john.id, event_id: e24.id)
+Ticket.create(user_id: john.id, event_id: e13.id)
+Ticket.create(user_id: john.id, event_id: e16.id)
+Ticket.create(user_id: john.id, event_id: e22.id)
 
 Bookmark.destroy_all
+Bookmark.create(user_id: john.id, event_id: e22.id)
+Bookmark.create(user_id: john.id, event_id: e3.id)
+Bookmark.create(user_id: john.id, event_id: e8.id)
