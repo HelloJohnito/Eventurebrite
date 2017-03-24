@@ -20,6 +20,14 @@ class EventBrowse extends React.Component {
     return name[0].toUpperCase() + name.slice(1);
   }
 
+  categoriesListing(event){
+    let stringCategories = [];
+    event.categories.forEach( category => {
+      stringCategories.push(category.category);
+    });
+    return stringCategories.join(", ");
+  }
+
   render(){
     // console.log("This is the current props")
     // console.log(this.props)
@@ -37,7 +45,8 @@ class EventBrowse extends React.Component {
                 title={event.title}
                 image={event.image_url}
                 location={event.location}
-                date={event.date} />
+                date={event.date}
+                categories={this.categoriesListing(event)} />
             ))}
           </div>
         </ul>

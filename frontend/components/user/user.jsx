@@ -6,7 +6,11 @@ import { Link } from 'react-router';
 class User extends React.Component {
 
   componentDidMount(){
-    
+
+  }
+
+  capitalize(name){
+    return name[0].toUpperCase() + name.slice(1);
   }
 
   currentUserInfo(){
@@ -41,11 +45,11 @@ class User extends React.Component {
       <div className="user-page">
         <div className="user-top">
           <div className="user-top-outer">
-            <h1 className="user-name">Welcome {this.props.currentUser.username}!</h1>
+            <h1 className="user-name">Welcome {this.capitalize(this.props.currentUser.username)}!</h1>
           </div>
           <div className="user-middle-outer">
 
-            <Link to="/user" className={userEvents}>Events by: {this.props.currentUser.username}</Link>
+            <Link to="/user" className={userEvents}>Events by: {this.capitalize(this.props.currentUser.username)}</Link>
 
             <Link to="/user/tickets" className={userTickets}>Upcoming Events</Link>
 

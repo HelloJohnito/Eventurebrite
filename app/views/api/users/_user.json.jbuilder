@@ -1,1 +1,5 @@
-json.extract! user, :id, :username, :bookmarks, :events, :tickets, :joined_events, :bookmarked_events
+json.extract! user, :id, :username, :events, :joined_events, :bookmarked_events
+
+#user.bookmarked_events.each do |event|
+  #json.set! event.id event
+#end 

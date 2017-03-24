@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/ticket_api_util';
+import * as APIUtil from '../util/bookmark_api_util';
 
 export const RECEIVE_ALL_BOOKMARKS = "RECEIVE_ALL_BOOKMARKS";
 export const RECEIVE_BOOKMARK = "RECEIVE_BOOKMARK";
@@ -21,8 +21,8 @@ export const createBookmark = (bookmark) => dispatch => (
   ))
 );
 
-export const deleteBookmark = (id) => dispatch => (
-  APIUtil.deleteBookmark(id).then( bookmark => dispatch(removeBookmark(bookmark)))
+export const deleteBookmark = (EventId) => dispatch => (
+  APIUtil.deleteBookmark(EventId).then( bookmark => dispatch(removeBookmark(bookmark)))
 );
 
 const receiveAllBookmarks = (bookmarks) => ({

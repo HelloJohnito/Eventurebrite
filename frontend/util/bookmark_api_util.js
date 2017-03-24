@@ -12,17 +12,19 @@ export const fetchBookmark = (id) => (
   })
 );
 
-export const createBookmark = (bookmark) => (
-  $.ajax({
-    method: "POST",
-    url: "api/bookmarks",
-    data: { bookmark }
-  })
-);
+export const createBookmark = (eventId) => {
+  return(
+    $.ajax({
+      method: "POST",
+      url: "api/bookmarks",
+      data: { bookmark: {event_id: eventId} }
+    })
+  );
+};
 
-export const deleteBookmark = (id) => (
+export const deleteBookmark = (eventId) => (
   $.ajax({
     method: "DELETE",
-    url: `api/bookmarks/${id}`
+    url: `api/bookmarks/${eventId}`
   })
 );

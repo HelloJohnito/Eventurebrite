@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+
 const UserList = (props) => {
   // console.log(props);
 
@@ -14,6 +15,8 @@ const UserList = (props) => {
   else if(props.route === `/user/bookmarks`){
     events = props.currentUser.bookmarked_events;
   }
+
+  // console.log(props)
 
   return (
     <div className="user-list-outer">
@@ -36,7 +39,9 @@ const UserList = (props) => {
                     </div>
                     <div className="user-event-info-bottom">
                       <div className="user-event-category">category wll be here</div>
-                      <div className="user-event-bookmark-icon">BM</div>
+                      <div className="user-event-bookmark-icon">
+                        <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+                      </div>
                     </div>
                   </div>
                 </div>

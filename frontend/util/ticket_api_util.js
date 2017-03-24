@@ -13,7 +13,6 @@ export const fetchTicket = (id) => (
 );
 
 export const createTicket = (ticket) => {
-  console.log(ticket)
   return (
   $.ajax({
     method: "POST",

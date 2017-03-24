@@ -1,1 +1,1 @@
-json.extract! @bookmark, :id, :event
+json.extract! @bookmark, :id, :event, :user

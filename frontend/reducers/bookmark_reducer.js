@@ -6,13 +6,13 @@ const BookmarkReducer = (state = {}, action ) => {
   switch(action.type){
     case RECEIVE_ALL_BOOKMARKS:
       return merge({}, action.bookmarks);
-    case RECEIVE_BOOKMARK:
-      const newBookmark = {[action.bookmark.id]: action.bookmark};
-      return merge({}, state, newBookmark);
-    case REMOVE_BOOKMARK:
-      const newState = merge({}, state);
-      delete newState [action.bookmark.id];
-      return newState;
+    // case RECEIVE_BOOKMARK:
+    //   const newBookmark = {[action.bookmark.id]: action.bookmark};
+    //   return merge({}, state, newBookmark);
+    // case REMOVE_BOOKMARK:
+    //   const newState = merge({}, state);
+    //   delete newState [action.bookmark.id];
+    //   return newState;
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-
+import BookmarkContainer from '../bookmarks/bookmark_container';
 
 const EventsIndexItem = (props) => (
   <li className="index-event">
@@ -16,10 +16,12 @@ const EventsIndexItem = (props) => (
         </div>
         <div className="index-event-info-bottom">
           <div className="index-event-category">{props.categories}</div>
-          <div className="index-event-bookmark-icon">BM</div>
         </div>
       </div>
     </Link>
+    <div className="index-event-bookmark-icon">
+      <BookmarkContainer eventId={props.eventId}/>
+    </div>
   </li>
 );
 

@@ -85,7 +85,9 @@ class EventDetail extends React.Component {
 
 
         <div className="detail-event-detail-middle">
-          <p className="detail-event-bookmark">BM</p>
+          <p className="detail-event-bookmark">
+            <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+          </p>
           {ticketOrEditButton}
         </div>
 

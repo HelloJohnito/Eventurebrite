@@ -16,8 +16,10 @@ const EventBrowseItem = (props) => (
             <div className="browse-event-location">{props.location}</div>
           </div>
           <div className="browse-event-info-bottom">
-            <div className="browse-event-category">category wll be here</div>
-            <div className="browse-event-bookmark-icon">BM</div>
+            <div className="browse-event-category">{props.categories}</div>
+            <div className="browse-event-bookmark-icon">
+              <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ class Api::BookmarksController < ApplicationController
 
   def index
     @bookmarks = current_user.bookmarks
-    render 'api/bookmarks'
+    render 'api/bookmarks/index'
   end
 
   def show
@@ -13,16 +13,19 @@ class Api::BookmarksController < ApplicationController
     @bookmark.user_id = current_user.id
 
     if @bookmark.save
-      render 'api/bookmarks'
+      render 'api/bookmarks/show'
     else
       render json: @bookmark.errors.full_messages, status: 422
     end
   end
 
   def destroy
-    @bookmark.find(params[:id])
+    event_id = params[:id].to_i
+    current_user_id = current_user.id
+    bookmark = Bookmark.where(["event_id = ? and user_id = ?", "#{event_id}", "#{current_user_id}"])
+    @bookmark = bookmark.first
     @bookmark.destroy
-    render "api/tickets/show"
+    render "api/bookmarks/show"
   end
 
   def bookmark_params
