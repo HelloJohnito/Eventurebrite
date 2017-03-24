@@ -94,7 +94,6 @@ const EventsCategoryPictures = () => (
       </div>
 
     </div>
-
   </div>
 
 );
