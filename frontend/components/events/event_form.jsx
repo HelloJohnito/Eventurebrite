@@ -32,6 +32,12 @@ class EventForm extends React.Component {
 
   update(field){
     return e => {
+      this.setState({[field]: e.currentTarget.value});
+    };
+  }
+
+  updatePicture(field){
+    return e => {
       if (Number.isInteger(parseInt(e.currentTarget.value))){
         this.setState({[field]: '$'+e.currentTarget.value});
       }else {
@@ -89,7 +95,7 @@ class EventForm extends React.Component {
 
             <label>Price
             <br/>
-            <input className="event-form-price" type="text" value={this.state.price} onChange={this.update("price")} placeholder="Price"></input>
+            <input className="event-form-price" type="text" value={this.state.price} onChange={this.updatePicture("price")} placeholder="Price"></input>
             </label>
 
             <label>Category
