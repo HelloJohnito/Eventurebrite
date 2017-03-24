@@ -53,7 +53,7 @@ class User extends React.Component {
 
             <Link to="/user/tickets" className={userTickets}>Upcoming Events</Link>
 
-            <Link to="/user/bookmarks" className={userBookmarks}>Saved Events</Link>
+            <Link to="/user/bookmarks" className={userBookmarks}>Bookmarked Events</Link>
           </div>
         </div>
         {this.currentUserInfo()}

@@ -23,8 +23,6 @@ class Bookmark extends React.Component {
   //   });
   //   return false;
   // }
-  componentWillReceiveProps(){
-  }
 
   userBookmark(){
     let event;
@@ -43,13 +41,13 @@ class Bookmark extends React.Component {
       if(this.userBookmark()){
         return (
           <div className="icon-selected">
-            <i className="fa fa-bookmark" aria-hidden="true"></i>
+            <i className="fa fa-bookmark fa-3px" aria-hidden="true"></i>
           </div> );
       }
     }
     return (
       <div className="icon-nonselected">
-        <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+        <i className="fa fa-bookmark-o fa-3px" aria-hidden="true"></i>
       </div> );
   }
 

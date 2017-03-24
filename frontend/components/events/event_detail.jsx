@@ -4,6 +4,7 @@ import TicketFormContainer from '../tickets/ticket_form_container';
 import SessionFormContainer from '../session_form/session_form_container';
 import Modal from 'react-modal';
 import { ModalStyle } from '../modal/modal_style';
+import BookmarkContainer from '../bookmarks/bookmark_container';
 
 class EventDetail extends React.Component {
   constructor(props){
@@ -86,7 +87,7 @@ class EventDetail extends React.Component {
 
         <div className="detail-event-detail-middle">
           <p className="detail-event-bookmark">
-            <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+            <BookmarkContainer eventId={this.props.event.id} />
           </p>
           {ticketOrEditButton}
         </div>

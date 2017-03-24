@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router';
+import BookmarkContainer from '../bookmarks/bookmark_container';
 
 
 const EventBrowseItem = (props) => (
   <li className="browse-event">
-    <Link to={`/events/${props.eventId}`}>
+    <div className="browse-event-o">
+
       <div className="browse-event-inner">
+        <Link to={`/events/${props.eventId}`}>
         <div className="browse-event-image">
             <img className="browse-event-image-url" src={props.image} />
         </div>
+        </Link>
+
         <div className="browse-event-info">
           <div className="browse-event-info-top">
             <div className="browse-event-date">{props.date}</div>
@@ -18,12 +23,14 @@ const EventBrowseItem = (props) => (
           <div className="browse-event-info-bottom">
             <div className="browse-event-category">{props.categories}</div>
             <div className="browse-event-bookmark-icon">
-              <i className="fa fa-bookmark-o" aria-hidden="true"></i>
+              <BookmarkContainer eventId={props.eventId} />
             </div>
           </div>
         </div>
       </div>
-    </Link>
+
+
+  </div>
   </li>
 );
 

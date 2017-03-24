@@ -38,10 +38,7 @@ const UserList = (props) => {
                       <div className="user-event-location">{event.location}</div>
                     </div>
                     <div className="user-event-info-bottom">
-                      <div className="user-event-category">category wll be here</div>
-                      <div className="user-event-bookmark-icon">
-                        <i className="fa fa-bookmark-o" aria-hidden="true"></i>
-                      </div>
+                      <div className="user-event-category"></div>
                     </div>
                   </div>
                 </div>
