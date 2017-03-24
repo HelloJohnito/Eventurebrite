@@ -6,6 +6,13 @@ import Modal from 'react-modal';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  var http = require("http");
+
+  setInterval(function() {
+    http.get("http://eventurebrite.herokuapp.com");
+  }, 300000);
+
   Modal.setAppElement(document.body);
 
   let store;
