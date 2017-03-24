@@ -22,26 +22,33 @@ EventureBrite allows users to:
 - Bookmark Events
 
 ### Landing Page
-![alt text][LandingPage]
-[LandingPage]: ReadMePicture/LandingPage.png
+<p align="center">
+    <img src="docs/ReadMePicture/LandingPage.png" alt="Landing Page" />
+</p>
 
 On the landing page, the hero image fades four pictures in and out in five second intervals. The user is able to sign up, log in, and log out using the nav bar where upon click, a modal will appear.   
 
 ### Event Categories
-![alt text][CategoryPicture]
-[CategoryPicture]: ReadMePicture/CategoryPicture.png
 
-![alt text][CategorySection]
-[CategorySection]: ReadMePicture/CategorySection.png
+<p align="center">
+    <img src="docs/ReadMePicture/CategoryPicture.png" alt="Event Category" />
+</p>
+
+<p align="center">
+    <img src="docs/ReadMePicture/CategorySection.png" alt="Category Section" />
+</p>
 
 Users are able to search events by categories by toggling individual category on the browse page. On click, the EventBrowse component dispatches the `filterByCategory` action which sends an ajax request to the 'GET' controller. The controller then filters the data from the data base, using active record queries. Then sends back a success and a JSON object to the Redux Store.
 
 ### Event Details/Tickets
-![alt text][EventDetail]
-[EventDetail]: ReadMePicture/EventDetail.png
 
-![alt text][EventTicket]
-[EventTicket]: ReadMePicture/EventTicket.png
+<p align="center">
+    <img src="docs/ReadMePicture/EventDetail.png" alt="Event Detail" />
+</p>
+
+<p align="center">
+    <img src="docs/ReadMePicture/EventTicket.png" alt="Event Ticket" />
+</p>
 
 Event Detail Page displays the Event information. On this page, the user can either register/purchase tickets or edit the event depending on if the event is the user's event.
 When logged out, the user will be asked to log in.
