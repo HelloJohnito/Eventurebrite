@@ -108,11 +108,11 @@ Ancho Chile Devil’s Food Cupcakes with Chocolate Ganache Frosting", user_id: b
 
 e4 = Event.create(title: "Vip tickets to Elvis Live!", description: "Wait what? Elvis? There is no way he is going to be on stage.... So then who's playing? Well, one way to find out! Join us Friday! We will be dancing and singing to Jailhouse Rock at 10pm sharp!! ", user_id: jenny.id, price: "$20", date: Date.new(2017, 11, 17), location: "Los Angeles", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490028961/elvis_pth2dy.jpg")
 
-e23 = Event.create(title: "GOLDEN YOUTH: GOLDROOM B2B LE YOUTH", description: "Los Angeles-based electronic outfit Goldroom make dreamy, synth-based electronic dance music. Formed in 2011, Goldroom is primarily the alias of electronic producer/songwriter Josh Legg, who previously fronted the similarly inclined trio NightWaves. As Goldroom, Legg released the self-produced Angeles EP in 2011. In 2013, he returned with the seven-track EP, Embrace, featuring vocalist Chela. Also in 2013, Legg added drummer Nick Sandler and keyboardist/vocalist Mereki Beach, transforming Goldroom into a live three-member ensemble.
+e23 = Event.create(title: "GOLDEN YOUTH: GOLDROOM LE YOUTH", description: "Los Angeles-based electronic outfit Goldroom make dreamy, synth-based electronic dance music. Formed in 2011, Goldroom is primarily the alias of electronic producer/songwriter Josh Legg, who previously fronted the similarly inclined trio NightWaves. As Goldroom, Legg released the self-produced Angeles EP in 2011. In 2013, he returned with the seven-track EP, Embrace, featuring vocalist Chela. Also in 2013, Legg added drummer Nick Sandler and keyboardist/vocalist Mereki Beach, transforming Goldroom into a live three-member ensemble.
 More on Le Youth
 90s sounds refracted through a thoroughly modern aesthetic. Tracks that are serious about moving a dance floor full of people without coming on too strong. Breezy California vibes touched by a twist of European flair. Wes James is the artist behind Le Youth.", user_id: john.id, price: "$20", date: Date.new(2018, 2, 2), location: "Los Angeles", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490331475/https-_2F_2Fcdn.evbuc.com_2Fimages_2F29106385_2F149753314296_2F1_2Foriginal_nzuijn.jpg")
 
-e24 = Event.create(title: "An International Retro-World-Jazz Celebration", description: "DoDo Band is a New York City-based miniature Band that blurs the lines between jazz, world and retro music. Made up of young musicians inspired by musical movements from all over the world -- samba, swing, Argentine tango, balkanica and reggae, to name a few -- DoDo Orchestra is a hip and cosmopolitan tribute to both international cultures and the retro styles of yesteryear. Experience their intoxicating blend of genres and sounds in this brunch show at New York's Club Groove.
+e24 = Event.create(title: "An International Retro-Jazz Celebration", description: "DoDo Band is a New York City-based miniature Band that blurs the lines between jazz, world and retro music. Made up of young musicians inspired by musical movements from all over the world -- samba, swing, Argentine tango, balkanica and reggae, to name a few -- DoDo Orchestra is a hip and cosmopolitan tribute to both international cultures and the retro styles of yesteryear. Experience their intoxicating blend of genres and sounds in this brunch show at New York's Club Groove.
 Doors Open at 6:00pm, Showtime at 7:00pm
 Please Print Your Voucher; Your Name will	be on a list at the Door, at entrance of the Club.
 This show Will Take place at Club Groove - located on 125 Macdougal Street on the corner of W. 3rd. New York, NY 10012
@@ -160,14 +160,12 @@ KNW is a huge supporter of women in tech. We're proud to say that all of our eve
 e30 = Event.create(title: "Hip Hop Massive Party", description: "21+ event.
 We are taking over Fridays in San Francisco. Will be the largest Friday hip hop party EVERY month. 15 tables, best looking venue in San Francisco, the Bay's best DJs playing the best music, best looking crowd around. We bring together some of the biggest promoters and hosts in the Bay Area to combine to make one huge massive party every 1st Friday of the month. Can check out previous Take Over Fridays pictures to verify how great the party is at www.facebook.com/ShapEvents", user_id: scott.id , price: "$40", date: Date.new(2018, 3, 27), location: "San Francisco", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490333226/https-_2F_2Fcdn.evbuc.com_2Fimages_2F29489732_2F133347295471_2F1_2Foriginal_o6rf96.jpg")
 
-e31 = Event.create(title: "SF Beta: EdTech Edition
-", description: "Education is ripe for disruption, and technology is driving the way forward.
+e31 = Event.create(title: "SF Beta: EdTech Edition", description: "Education is ripe for disruption, and technology is driving the way forward.
 On July 19, you're invited to SF Beta: EdTech Edition, a demo night featuring 10 leading EdTech startups from Silicon Valley and beyond.
 Our events, made by and for the founder & tech community, bring up-and-coming startups together with a welcoming community of founders, investors, developers, designers, dealmakers, and more.
 $10 Presale Passes are now available!", user_id: john.id , price: "$10", date: Date.new(2018, 4, 27), location: "San Francisco", image_url: "https://res.cloudinary.com/deh9l9lyq/image/upload/v1490333609/https-_2F_2Fcdn.evbuc.com_2Fimages_2F24276425_2F157247754704_2F1_2Foriginal_luvep5.jpg")
 
-e32 = Event.create(title: "NEW SCHOOL DAZE LA
-", description: "#NewSchoolDaze is a celebration of success hosted by HBCU Young Alums, members of Greek Organizations and Tastemakers
+e32 = Event.create(title: "NEW SCHOOL DAZE LA", description: "#NewSchoolDaze is a celebration of success hosted by HBCU Young Alums, members of Greek Organizations and Tastemakers
 Join HBCU Young Alums, Greeks, Millennials, Tastemakers, and All Party Goers for a night of nostalgia...with a twist! Hosted by the dopest creatives in Los Angeles!
 DJ's will be mixing it up, hitting you with
 CLASSICS and NEW BANGERS from EVERYWHERE!
