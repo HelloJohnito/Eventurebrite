@@ -9,15 +9,6 @@ class EventForm extends React.Component {
     this.state = this.props.event;
   }
 
-  // componentDidUpdate(){
-  //   this.redirectIfLoggedOut();
-  // }
-  //
-  // redirectIfLoggedOut(){
-  //   if(!this.props.loggedIn){
-  //     this.props.router.push("/");
-  //   }
-  // }
 
   componentDidMount(){
     if(this.props.formType === "edit"){
@@ -40,9 +31,13 @@ class EventForm extends React.Component {
   }
 
   update(field){
-    return e => (
-      this.setState({[field]: e.currentTarget.value})
-    );
+    return e => {
+      if (Number.isInteger(parseInt(e.currentTarget.value))){
+        this.setState({[field]: '$'+e.currentTarget.value});
+      }else {
+        this.setState({[field]: e.currentTarget.value});
+      }
+    };
   }
 
   handleSubmit(e){
@@ -111,7 +106,7 @@ class EventForm extends React.Component {
 
             <label>Description
             <br/>
-            <textarea className="event-form-description" value={this.state.title} onChange={this.update("description")} placeholder="Description"></textarea>
+            <textarea className="event-form-description" value={this.state.description} onChange={this.update("description")} placeholder="Description"></textarea>
             </label>
 
             <div className="event-form-upload-image-outer">

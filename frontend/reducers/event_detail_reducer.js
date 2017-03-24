@@ -17,8 +17,8 @@ const EventDetailReducer = (state= defaultEventDetail, action) => {
   switch(action.type){
     case RECEIVE_DETAIL_EVENT:
       return merge({}, action.event);
-    case RECEIVE_NEW_EVENT:
-      return merge({}, action.event);
+    // case RECEIVE_NEW_EVENT:
+    //   return merge({}, action.event);
     case RECEIVE_ERRORS:
       const error = action.error;
       return merge({}, state, { error });
