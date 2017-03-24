@@ -41,13 +41,13 @@ class Bookmark extends React.Component {
       if(this.userBookmark()){
         return (
           <div className="icon-selected">
-            <i className="fa fa-bookmark fa-3px" aria-hidden="true"></i>
+            <i id="icon" className="fa fa-bookmark" aria-hidden="true"></i>
           </div> );
       }
     }
     return (
       <div className="icon-nonselected">
-        <i className="fa fa-bookmark-o fa-3px" aria-hidden="true"></i>
+        <i id="icon" className="fa fa-bookmark-o" aria-hidden="true"></i>
       </div> );
   }
 

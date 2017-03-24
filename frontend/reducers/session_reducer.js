@@ -30,7 +30,6 @@ const SessionReducer = (state = _nullUser, action) => {
       return newState;
     case REMOVE_BOOKMARK:
       newState = merge({}, state);
-      // debugger
       let indexOfObject = 0;
       const eventId = action.bookmark.event.id;
       let bookmarkedEvents = state.currentUser.bookmarked_events;

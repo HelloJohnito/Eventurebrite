@@ -36,6 +36,8 @@ class EventDetail extends React.Component {
   //   return () => this.props.createTicket(eventId);
   // }
 
+
+
   capitalize(name) {
     return name[0].toUpperCase() + name.slice(1);
   }
@@ -51,6 +53,10 @@ class EventDetail extends React.Component {
     else{
       return <p className="detail-event-ticket" onClick={this.handleTicket.bind(this)}>Ticket</p>;
     }
+  }
+
+  componentWillUnmount(){
+    this.props.event.image_url = "";
   }
 
 
@@ -77,18 +83,18 @@ class EventDetail extends React.Component {
             <img className="detail-event-image-size" src={this.props.event.image_url} />
           </div>
           <div className="detail-event-details-top">
-            <p className="detail-event-date">{this.props.event.date}</p>
-            <h1 className="detail-event-title">{this.props.event.title}</h1>
-            <p className="detail-event-user">By: {this.capitalize(this.props.event.user.username)}</p>
-            <p className="detail-event-price">{this.props.event.price}</p>
+            <div className="detail-event-date">{this.props.event.date}</div>
+            <div className="detail-event-title">{this.props.event.title}</div>
+            <div className="detail-event-user">By: {this.capitalize(this.props.event.user.username)}</div>
+            <div className="detail-event-price">{this.props.event.price}</div>
           </div>
         </div>
 
 
         <div className="detail-event-detail-middle">
-          <p className="detail-event-bookmark">
+          <div className="detail-event-bookmark">
             <BookmarkContainer eventId={this.props.event.id} />
-          </p>
+          </div>
           {ticketOrEditButton}
         </div>
 
@@ -104,14 +110,18 @@ class EventDetail extends React.Component {
 
 
         <div className="detail-event-detail-bottom">
-          <p className="detail-event-description">
-            Description:
+          <div className="detail-event-description">
+            <div className="detail-event-description-head">Description:</div>
+            <br/>
             {this.props.event.description}
-          </p>
-          <p className="detail-event-location">
-            Location:
-            {this.props.event.location}
-          </p>
+          </div>
+
+          <div className="detail-event-location">
+            <div className="">
+              <h1 className="detail-event-location-head">Location:</h1>
+              <p className="detail-event-location-body">{this.props.event.location}</p>
+            </div>
+          </div>
         </div>
 
       </div>
