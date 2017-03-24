@@ -14,7 +14,6 @@ class User extends React.Component {
   }
 
   currentUserInfo(){
-    // console.log(this.props.route)
     if(this.props.route === "/user"){
       return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }

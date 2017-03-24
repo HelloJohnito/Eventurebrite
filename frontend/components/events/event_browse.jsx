@@ -29,8 +29,6 @@ class EventBrowse extends React.Component {
   }
 
   render(){
-    // console.log("This is the current props")
-    // console.log(this.props)
     let text = this.props.category !== undefined ? this.capitalize(this.props.category) : "All";
 
     return(

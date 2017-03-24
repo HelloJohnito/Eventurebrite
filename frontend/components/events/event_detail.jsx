@@ -15,10 +15,10 @@ class EventDetail extends React.Component {
 
   componentDidMount(){
     this.props.fetchDetailEvent(this.props.eventId);
+    this.setState({ modalOpen: false });
   }
 
   componentWillReceiveProps(nextProps){
-    this.setState({ modalOpen: false });
     if(this.props.eventId !== nextProps.eventId){
       this.props.fetchDetailEvent(nextProps.eventId);
   }}
@@ -29,6 +29,7 @@ class EventDetail extends React.Component {
   //
   onModalClose(){
     this.setState({modalOpen: false});
+    this.props.clearErrors();
   }
 
   //check if user is signed in

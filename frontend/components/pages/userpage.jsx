@@ -18,5 +18,3 @@ class UserPage extends React.Component {
 }
 
 export default UserPage;
-
-// console.log(this.props.route.path)

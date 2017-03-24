@@ -16,7 +16,6 @@ const unique = (events) => {
 
 
 const UserList = (props) => {
-  // console.log(props);
 
   let events;
   if(props.route === "/user"){
@@ -24,13 +23,11 @@ const UserList = (props) => {
   }
   else if(props.route === `/user/tickets`){
     events = unique(props.currentUser.joined_events);
-    console.log(events)
   }
   else if(props.route === `/user/bookmarks`){
     events = props.currentUser.bookmarked_events;
   }
 
-  // console.log(props)
 
 
   return (
