@@ -1,8 +1,7 @@
 # Eventure
 
-[EventureBrite link][eventurebrite]
+[Live Link](https://eventurebrite.herokuapp.com/#/)
 
-[eventurebrite]: eventurebrite.herokuapp.com
 
 
 ## Background
