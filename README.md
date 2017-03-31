@@ -5,7 +5,7 @@
 [eventurebrite]: eventurebrite.herokuapp.com
 
 
-## Minimum Viable Product
+## Background
 
 Eventurebrite is a single page web application inspired by Eventbrite built using Ruby on Rails and React.js + Redux.
 
