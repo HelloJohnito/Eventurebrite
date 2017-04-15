@@ -12,6 +12,7 @@ const _nullUser = Object.freeze({
 });
 
 const SessionReducer = (state = _nullUser, action) => {
+
   Object.freeze(state);
   let newState;
   switch(action.type) {
@@ -29,21 +30,15 @@ const SessionReducer = (state = _nullUser, action) => {
       });
 
     case RECEIVE_BOOKMARK:
-      newState = merge({}, _nullUser, state);
-      newState.currentUser.bookmarked_events.push(action.bookmark.event);
-      return newState;
+      const newBookmark = {[action.bookmark.event.id]: action.bookmark};
+      newState = merge({}, state);
+      newState.currentUser.bookmarked[action.bookmark.event.id] = action.bookmark;
+      return merge({}, state, newState);
 
     case REMOVE_BOOKMARK:
+    //problem
       newState = merge({}, state);
-      let indexOfObject = 0;
-      const eventId = action.bookmark.event.id;
-      let bookmarkedEvents = state.currentUser.bookmarked_events;
-      for(let i = 0; i < bookmarkedEvents.length; i++){
-        if(bookmarkedEvents[i].id === eventId){
-          indexOfObject = i;
-        }
-      }
-        newState.currentUser.bookmarked_events.splice(indexOfObject, 1);
+      delete newState [action.bookmark.id];
       return newState;
 
     case RECEIVE_TICKET:
@@ -53,7 +48,7 @@ const SessionReducer = (state = _nullUser, action) => {
 
     case RECEIVE_NEW_EVENT:
       newState = merge({}, _nullUser, state);
-      newState.currentUser.events.push(action.event)
+      newState.currentUser.events.push(action.event);
       return newState;
 
     default:
@@ -62,3 +57,24 @@ const SessionReducer = (state = _nullUser, action) => {
 };
 
 export default SessionReducer;
+
+
+
+
+// case RECEIVE_BOOKMARK:
+//   newState = merge({}, _nullUser, state);
+//   newState.currentUser.bookmarked_events.push(action.bookmark.event);
+//   return newState;
+
+// case REMOVE_BOOKMARK:
+//   newState = merge({}, state);
+//   let indexOfObject = 0;
+//   const eventId = action.bookmark.event.id;
+//   let bookmarkedEvents = state.currentUser.bookmarked_events;
+//   for(let i = 0; i < bookmarkedEvents.length; i++){
+//     if(bookmarkedEvents[i].id === eventId){
+//       indexOfObject = i;
+//     }
+//   }
+//     newState.currentUser.bookmarked_events.splice(indexOfObject, 1);
+//   return newState;

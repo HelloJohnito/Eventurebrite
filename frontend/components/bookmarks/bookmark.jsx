@@ -1,6 +1,9 @@
 import React from 'react';
 
 class Bookmark extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
   ensureLogin(){
     if(this.props.currentUser === null){
@@ -10,16 +13,19 @@ class Bookmark extends React.Component {
     }
   }
 
+  // userBookmark(){
+  //   let event;
+  //   for( let i = 0; i < this.props.currentUser.bookmarked_events.length; i++){
+  //     event = this.props.currentUser.bookmarked_events[i];
+  //     if(event.id === this.props.eventId){
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
 
   userBookmark(){
-    let event;
-    for( let i = 0; i < this.props.currentUser.bookmarked_events.length; i++){
-      event = this.props.currentUser.bookmarked_events[i];
-      if(event.id === this.props.eventId){
-        return true;
-      }
-    }
-    return false;
+    return this.props.currentUser.bookmarked.hasOwnProperty(this.props.eventId);
   }
 
   displayBookmark(){
@@ -51,7 +57,6 @@ class Bookmark extends React.Component {
   }
 
   render(){
-
     return(
       <div>
         <div onClick={this.handleClick.bind(this)}>{this.displayBookmark()}</div>
