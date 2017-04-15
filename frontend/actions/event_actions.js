@@ -1,7 +1,6 @@
 import * as ApiUtil from '../util/event_api_util';
 import { hashHistory } from 'react-router';
 
-
 export const RECEIVE_ALL_EVENTS = "RECEIVE_ALL_EVENTS";
 export const RECEIVE_DETAIL_EVENT = "RECEIVE_DETAIL_EVENT";
 export const RECEIVE_NEW_EVENT = "RECEIVE_NEW_EVENT";
