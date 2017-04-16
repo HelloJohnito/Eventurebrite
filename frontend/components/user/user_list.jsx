@@ -25,6 +25,7 @@ const UserList = (props) => {
   }
   else if(props.route === `/user/bookmarks`){
     events = props.userBookmarks;
+    // console.log(events)
   }
 
 

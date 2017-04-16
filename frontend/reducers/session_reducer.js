@@ -30,9 +30,9 @@ const SessionReducer = (state = _nullUser, action) => {
       });
 
     case RECEIVE_BOOKMARK:
-      const newBookmark = {[action.bookmark.event.id]: action.bookmark};
+      // const newBookmark = {[action.bookmark.event.id]: action.bookmark};
       newState = merge({}, state);
-      newState.currentUser.bookmarked[action.bookmark.event.id] = action.bookmark;
+      newState.currentUser.bookmarked[action.bookmark.event.id] = action.bookmark.event;
       return merge({}, state, newState);
 
     case REMOVE_BOOKMARK:

@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 class User extends React.Component {
 
   componentDidMount(){
-    // console.log(this.props)
   }
 
   capitalize(name){
