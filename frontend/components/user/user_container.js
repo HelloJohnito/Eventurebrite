@@ -5,6 +5,7 @@ import User from './user';
 const mapStateToProps = (state, ownProps) => {
   return({
     currentUser: state.session.currentUser,
+    userBookmarks: Object.keys(state.session.currentUser.bookmarked).map( id => state.session.currentUser.bookmarked[id]),
     route: ownProps.route
   });
 };

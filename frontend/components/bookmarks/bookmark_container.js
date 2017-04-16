@@ -6,7 +6,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({
   currentUser: state.session.currentUser,
   eventId: ownProps.eventId
-});};
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   createBookmark: (eventId) => dispatch(createBookmark(eventId)),

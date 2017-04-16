@@ -36,7 +36,6 @@ const SessionReducer = (state = _nullUser, action) => {
       return merge({}, state, newState);
 
     case REMOVE_BOOKMARK:
-
       newState = merge({}, state);
       delete newState.currentUser.bookmarked [action.bookmark.event.id];
       return newState;

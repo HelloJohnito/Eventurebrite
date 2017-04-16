@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 class User extends React.Component {
 
   componentDidMount(){
-
+    // console.log(this.props)
   }
 
   capitalize(name){
@@ -21,7 +21,7 @@ class User extends React.Component {
       return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }
     else if(this.props.route === `/user/bookmarks`){
-      return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
+      return <UserList userBookmarks={this.props.userBookmarks} route={this.props.route} />;
     }
   }
 
