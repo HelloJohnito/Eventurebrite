@@ -57,8 +57,7 @@ class EventDetail extends React.Component {
   }
 
   componentWillUnmount(){
-    this.props = null;
-    // console.log("working")
+    this.props.event.image_url = "";
   }
 
 
