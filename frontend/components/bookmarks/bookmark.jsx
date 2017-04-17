@@ -3,6 +3,7 @@ import React from 'react';
 class Bookmark extends React.Component {
   constructor(props){
     super(props);
+    console.log(props)
   }
 
   ensureLogin(){
@@ -25,7 +26,11 @@ class Bookmark extends React.Component {
   // }
 
   userBookmark(){
-    return this.props.currentUser.bookmarked.hasOwnProperty(this.props.eventId);
+    if (this.props.currentUser.bookmarked){
+      return this.props.currentUser.bookmarked.hasOwnProperty(this.props.eventId);
+    }else {
+      return false;
+    }
   }
 
   displayBookmark(){
