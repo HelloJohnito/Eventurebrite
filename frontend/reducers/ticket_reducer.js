@@ -9,7 +9,6 @@ const TicketReducer = (state = {}, action ) => {
       return merge({}, action.tickets);
 
     case RECEIVE_TICKET:
-      // console.log(action)
       const newTicket = {[action.ticket.id]: action.ticket};
       let nextState = merge({}, state, newTicket);
       return nextState;

@@ -3,7 +3,7 @@ import Bookmark from './bookmark';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state)
+
   let bookmarks;
   if (state.session.currentUser !== null){
     bookmarks = state.session.currentUser.bookmarked;

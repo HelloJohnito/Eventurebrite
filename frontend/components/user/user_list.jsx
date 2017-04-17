@@ -22,7 +22,6 @@ const UserList = (props) => {
   }
   else if(props.route === `/user/tickets`){
     events = unique(props.userTickets);
-    // events = props.userTickets;
   }
   else if(props.route === `/user/bookmarks`){
     events = props.userBookmarks;
