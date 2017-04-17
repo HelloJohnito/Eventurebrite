@@ -4,7 +4,6 @@ import { fetchAllTickets } from '../../actions/ticket_actions';
 import User from './user';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
   return({
     currentUser: state.session.currentUser,
     userBookmarks: Object.keys(state.session.currentUser.bookmarked).map( id => state.session.currentUser.bookmarked[id]),

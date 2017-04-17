@@ -27,8 +27,6 @@ class User extends React.Component {
 
 
   render(){
-    console.log(this.props.userTickets)
-
     let userEvents = "user-events";
     let userTickets = "user-tickets";
     let userBookmarks = "user-bookmarks";
