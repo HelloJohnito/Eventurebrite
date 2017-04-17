@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   return({
     currentUser: state.session.currentUser,
     userBookmarks: Object.keys(state.session.currentUser.bookmarked).map( id => state.session.currentUser.bookmarked[id]),
-    userTickets: Object.keys(state.tickets).map( id => state.tickets[id]),
+    userTickets: Object.keys(state.tickets).map( id => state.tickets[id].event),
     route: ownProps.route
   });
 };
