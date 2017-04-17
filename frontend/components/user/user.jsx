@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 class User extends React.Component {
 
   componentDidMount(){
+    this.props.fetchAllUserTickets();
   }
 
   capitalize(name){
@@ -17,7 +18,7 @@ class User extends React.Component {
       return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
     }
     else if(this.props.route === `/user/tickets`){
-      return <UserList currentUser={this.props.currentUser} route={this.props.route} />;
+      return <UserList userTickets={this.props.userTickets} route={this.props.route} />;
     }
     else if(this.props.route === `/user/bookmarks`){
       return <UserList userBookmarks={this.props.userBookmarks} route={this.props.route} />;
@@ -26,6 +27,7 @@ class User extends React.Component {
 
 
   render(){
+    console.log(this.props.userTickets)
 
     let userEvents = "user-events";
     let userTickets = "user-tickets";

@@ -6,13 +6,16 @@ const TicketReducer = (state = {}, action ) => {
   switch(action.type){
     case RECEIVE_ALL_TICKETS:
       return merge({}, action.tickets);
-    // case RECEIVE_TICKET:
-    //   const newTicket = {[action.ticket.id]: action.ticket};
-    //   return merge({}, state, newTicket);
+
+    case RECEIVE_TICKET:
+      const newTicket = {[action.ticket.id]: action.ticket};
+      return merge({}, state, newTicket);
+
     case REMOVE_TICKET:
       const newState = merge({}, state);
       delete newState [action.ticket.id];
       return newState;
+      
     default:
       return state;
   }

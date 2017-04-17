@@ -2,7 +2,7 @@ class Api::TicketsController < ApplicationController
 
   def index
     @tickets = current_user.tickets
-    render 'api/tickets'
+    render 'api/tickets/index'
   end
 
   def create

@@ -13,9 +13,9 @@
 class User < ApplicationRecord
   has_many :events
 
-  has_many :joined_events,
-    through: :tickets,
-    source: :event
+  # has_many :joined_events,
+  #   through: :tickets,
+  #   source: :event
 
   has_many :tickets
   has_many :bookmarks

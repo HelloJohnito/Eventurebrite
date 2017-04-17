@@ -30,7 +30,6 @@ const SessionReducer = (state = _nullUser, action) => {
       });
 
     case RECEIVE_BOOKMARK:
-      // const newBookmark = {[action.bookmark.event.id]: action.bookmark};
       newState = merge({}, state);
       newState.currentUser.bookmarked[action.bookmark.event.id] = action.bookmark.event;
       return merge({}, state, newState);
@@ -40,10 +39,10 @@ const SessionReducer = (state = _nullUser, action) => {
       delete newState.currentUser.bookmarked [action.bookmark.event.id];
       return newState;
 
-    case RECEIVE_TICKET:
-      newState = merge({}, _nullUser, state);
-      newState.currentUser.joined_events.push(action.ticket.event);
-      return newState;
+    // case RECEIVE_TICKET:
+    //   newState = merge({}, _nullUser, state);
+    //   newState.currentUser.joined_events.push(action.ticket.event);
+    //   return newState;
 
     case RECEIVE_NEW_EVENT:
       newState = merge({}, _nullUser, state);
