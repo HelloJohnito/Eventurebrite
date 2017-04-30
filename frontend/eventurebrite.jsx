@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
+// import Perf from 'react-addons-perf';
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // window.Perf = Perf;
 
   Modal.setAppElement(document.body);
 

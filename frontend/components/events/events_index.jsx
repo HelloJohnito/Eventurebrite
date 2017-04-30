@@ -6,6 +6,7 @@ class EventsIndex extends React.Component {
   constructor(props){
     super(props);
   }
+  
 
   componentDidMount(){
     this.props.fetchAllEvents(9);
