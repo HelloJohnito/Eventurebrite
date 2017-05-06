@@ -17,6 +17,12 @@ RSpec.describe Api::EventsController, type: :controller do
 
   describe "POST #create" do
     let! (:user) { FactoryGirl.create(:user) }
+    # let! (:user) {User.create!(username: "john123", password: "password") }
+    #user id is not working
+
+    before do
+      allow(controller).to receive(:current_user) { :user }
+    end
 
     context "with invalid params" do
       before(:each) do
