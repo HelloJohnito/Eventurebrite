@@ -19,7 +19,7 @@ class EventForm extends React.Component {
 
 
   uploadImage(e){
-    
+
     e.preventDefault();
     cloudinary.openUploadWidget(
       window.cloudinary_options,
@@ -66,7 +66,6 @@ class EventForm extends React.Component {
 
 
   render(){
-
     let text = this.props.formType === "new" ? "Create New Event" : "Update Event";
     return(
       <div className="event-form-outer">
