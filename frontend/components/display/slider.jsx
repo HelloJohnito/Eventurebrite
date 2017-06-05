@@ -30,16 +30,16 @@ class SliderImage extends React.Component {
     return (
       <div id="slideshow">
         <div className="slide-border">
-          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490025934/snowboard_m1qzhp.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/q_auto/v1490025934/snowboard_m1qzhp.jpg"/>
         </div>
         <div className="slide-border">
-          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026685/concert_su3a20.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/q_auto/v1490026685/concert_su3a20.jpg"/>
         </div>
         <div className="slide-border">
-          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026763/surf_q1ljog.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/q_auto/v1490026763/surf_q1ljog.jpg"/>
         </div>
         <div className="slide-border">
-          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/v1490026930/fireworks_ec9foi.jpg"/>
+          <img className="slide-image" src="https://res.cloudinary.com/deh9l9lyq/image/upload/q_auto/v1490026930/fireworks_ec9foi.jpg"/>
         </div>
       </div>
     );
