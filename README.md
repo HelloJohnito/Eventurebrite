@@ -1,12 +1,8 @@
-# Eventure
+# EventureBrite
 
 [Live Link](https://eventurebrite.herokuapp.com/#/)
 
-
-
-## Background
-
-Eventurebrite is a full stack web application that was inspired by Eventbrite. It was built using Ruby on Rails with Postgres for the backend and React and Redux for the frontend. The application allows users to host events, bookmark events, search events by categories, and purchase tickets.
+EventureBrite is a full stack web application that was inspired by Eventbrite. It was built using Ruby on Rails with PostgreSQL for the backend and React and Redux for the frontend. The application allows users to host events, bookmark events, search events by categories, and purchase tickets.
 
 
 ## Features
@@ -28,7 +24,7 @@ EventureBrite allows users to:
 On the landing page, the hero image fades four pictures in and out in five second intervals. The user is able to sign up, log in, and log out using the nav bar where upon click, a modal will appear.   
 
 ### Authentication
-Passwords are well protected and is not stored in the database directly. It is instead, salted and hashed into digests using BCrypt to ensure maximum security. Upon User request to log in, the password is salted and hashed again to compare the new digest with the one stored in the database. Users are then given a session-token which is used to verify user credentials through out the site.
+Passwords are well protected and are not stored in the database directly. It is instead, salted and hashed into digests using BCrypt to ensure maximum security. Upon user request to log in, the password is salted and hashed again to compare the new digest with the one stored in the database. Users are then given a session-token which is used to verify user credentials through out the site.
 
 
 ### Event Categories
@@ -41,7 +37,7 @@ Passwords are well protected and is not stored in the database directly. It is i
     <img src="docs/ReadMePicture/CategorySection.png" alt="Category Section" />
 </p>
 
-Users are able to search events by categories by toggling individual category on the browse page. On click, the EventBrowse component dispatches the `filterByCategory` action which sends an ajax request to the 'GET' controller. The controller then filters the data from the data base, using active record queries. Then sends back a success and a JSON object to the Redux Store.
+Users are able to search events by categories by toggling individual category on the browse page. On click, the EventBrowse component dispatches the `filterByCategory` action which sends an AJAX request to the 'GET' controller. The controller then filters the data from the data base, using active record queries. Then sends back a success and a JSON object to the Redux Store.
 
 Code Sample of the active record query used for event category:
 Note: the '?' is used to prevent CSRF injections into the data base.
@@ -102,7 +98,7 @@ checkUserEvent(){
 
 ### Bookmark
 
-Signed in users can bookmark events by toggling the bookmark icon, changing the color depending on whether the event has been bookmarked or not. On click, it updates the User's bookmarked event allowing the user to view the bookmarked events in his/her profile page.
+Signed in users can bookmark events by toggling the bookmark icon, changing the color depending on whether the event has been bookmarked or not. On click, it updates the user's bookmarked event allowing the user to view the bookmarked events in his/her profile page.
 
 ### Create Events
 

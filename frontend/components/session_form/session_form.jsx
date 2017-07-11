@@ -14,7 +14,6 @@ class SessionForm extends React.Component {
     this.redirectIfLoggedIn();
   }
 
-
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
       this.props.router.push("/");
