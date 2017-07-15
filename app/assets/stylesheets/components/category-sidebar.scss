@@ -1,21 +1,19 @@
 
 .category-top{
   display: flex;
-  margin-top: 20px;
 }
 
 ul.category{
   box-sizing: border-box;
   background-color: white;
   color: $blue;
-  width: 200px;
+  width: 240px;
   height: 300px;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 h1.category-all-category{
