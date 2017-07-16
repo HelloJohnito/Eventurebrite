@@ -5,6 +5,7 @@ import SessionFormContainer from '../session_form/session_form_container';
 import Modal from 'react-modal';
 import { ModalStyle } from '../modal/modal_style';
 import BookmarkContainer from '../bookmarks/bookmark_container';
+import Map from '../map/map';
 
 class EventDetail extends React.Component {
   constructor(props){
@@ -36,7 +37,6 @@ class EventDetail extends React.Component {
   // purchaseTicket(eventId){
   //   return () => this.props.createTicket(eventId);
   // }
-
 
 
   capitalize(name) {
@@ -121,6 +121,7 @@ class EventDetail extends React.Component {
             <div className="">
               <h1 className="detail-event-location-head">Location:</h1>
               <p className="detail-event-location-body">{this.props.event.location}</p>
+              <Map type="detail" location={this.props.event.location}/>
             </div>
           </div>
         </div>

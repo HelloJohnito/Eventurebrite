@@ -1,6 +1,7 @@
 import React from 'react';
 import EventBrowseContainer from '../events/event_browse_container';
 import CategorySidebar from '../display/category_sidebar';
+import Map from '../map/map';
 
 
 
@@ -14,7 +15,11 @@ class BrowsePageIndex extends React.Component {
   render(){
     return (
       <div className="browse-page">
-        <CategorySidebar />
+        <div className="browse-page-left-container">
+          <Map type="browse" location="United States"/>
+          <CategorySidebar />
+        </div>
+
         <EventBrowseContainer type="index" />
       </div>
     );
