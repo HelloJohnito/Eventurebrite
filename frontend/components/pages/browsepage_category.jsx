@@ -14,7 +14,7 @@ class BrowsePageCategory extends React.Component {
     return(
       <div className="browse-page">
         <div className="browse-page-left-container">
-          <Map type="browse"/>
+          <Map type="browse" location="United States"/>
           <CategorySidebar />
         </div>
 

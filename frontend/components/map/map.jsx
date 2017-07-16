@@ -1,8 +1,9 @@
 import React from 'react';
 
 const coordinates = {
-  "Index": {
-
+  "United States": {
+    lat: 37.0902,
+    lng: -95.7129
   },
 
   "San Francisco": {
@@ -37,17 +38,29 @@ class Map extends React.Component{
   }
 
   componentDidMount(){
+    const zoomNum = (this.props.location === "United States") ? 2 : 11;
     const mapOptions = {
-      center: { lat: coordinates["New York"].lat, lng: coordinates["New York"].lng },
-      zoom: 11
+      center: { lat: coordinates[this.props.location].lat, lng: coordinates[this.props.location].lng },
+      zoom: zoomNum
     };
 
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
   }
 
-  render(){
+  componentDidUpdate(oldProps){
+    if(oldProps.location !== this.props.location){
+      const zoomNum = (this.props.location === "United States") ? 2 : 11;
+      const mapOptions = {
+        center: { lat: coordinates[this.props.location].lat, lng: coordinates[this.props.location].lng },
+        zoom: zoomNum
+      };
+      const map = this.refs.map;
+      this.map = new google.maps.Map(map, mapOptions);
+    }
+  }
 
+  render(){
     let mapType = (this.props.type === "browse") ? "map-browse" : "map-detail";
     return (
       <div id={mapType} ref='map'>

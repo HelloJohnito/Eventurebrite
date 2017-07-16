@@ -122,7 +122,7 @@ class EventDetail extends React.Component {
             <div className="">
               <h1 className="detail-event-location-head">Location:</h1>
               <p className="detail-event-location-body">{this.props.event.location}</p>
-              <Map type="detail"/>
+              <Map type="detail" location={this.props.event.location}/>
             </div>
           </div>
         </div>
