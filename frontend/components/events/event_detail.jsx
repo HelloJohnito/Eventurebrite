@@ -39,7 +39,6 @@ class EventDetail extends React.Component {
   // }
 
 
-
   capitalize(name) {
     return name[0].toUpperCase() + name.slice(1);
   }
