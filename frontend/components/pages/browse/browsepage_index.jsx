@@ -23,7 +23,7 @@ class BrowsePageIndex extends React.Component {
     return (
       <div className="browse-page">
         <div className="browse-page-left-container">
-          <Map type="browse" location="United States"/>
+          <Map type="browse" location="United States" events={this.props.events}/>
           <CategorySidebar />
         </div>
 

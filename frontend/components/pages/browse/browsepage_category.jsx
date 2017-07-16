@@ -7,9 +7,9 @@ import Map from '../../map/map';
 class BrowsePageCategory extends React.Component {
 
   componentDidMount() {
-    window.scrollTo(0, 0); this.props.filterByCategory(12, this.props.category);
+    window.scrollTo(0, 0);
+    this.props.filterByCategory(12, this.props.category);
   }
-
 
   componentWillReceiveProps(newProps){
     if(newProps.category !== this.props.category){
@@ -25,7 +25,7 @@ class BrowsePageCategory extends React.Component {
     return(
       <div className="browse-page">
         <div className="browse-page-left-container">
-          <Map type="browse" location="United States"/>
+          <Map type="browse" location="United States" events={this.props.events}/>
           <CategorySidebar />
         </div>
 

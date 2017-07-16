@@ -50,7 +50,7 @@ class Map extends React.Component{
   }
 
   componentDidUpdate(oldProps){
-    if(oldProps.location !== this.props.location){
+    if(oldProps.location !== this.props.location || oldProps.events !== this.props.events){
       const zoomNum = (this.props.location === "United States") ? 2 : 11;
       const mapOptions = {
         center: { lat: coordinates[this.props.location].lat, lng: coordinates[this.props.location].lng },
@@ -68,7 +68,7 @@ class Map extends React.Component{
       events = [this.props.coordinate];
     }
     else {
-      events = [];
+      events = this.props.events;
     }
 
     events.forEach((event)=>{
