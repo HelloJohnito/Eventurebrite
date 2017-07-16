@@ -58,16 +58,21 @@ class Map extends React.Component{
       };
       const map = this.refs.map;
       this.map = new google.maps.Map(map, mapOptions);
-
-      this.addMarkers([]);
+      this.addMarkers();
     }
   }
 
+  addMarkers(){
+    let events;
+    if(this.props.type === "detail"){
+      events = [this.props.coordinate];
+    }
+    else {
+      events = [];
+    }
 
-
-  addMarkers(events){
     events.forEach((event)=>{
-      const pos = new google.maps.LatLng(37.7758, -122.435);
+      const pos = new google.maps.LatLng(event.lat, event.lng);
       const marker = new google.maps.Marker({
         position: pos,
         map: this.map

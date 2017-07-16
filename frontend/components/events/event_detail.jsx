@@ -76,6 +76,8 @@ class EventDetail extends React.Component {
       ticketOrEditButton = <p className="detail-event-ticket" onClick={this.handleTicket.bind(this)}>Ticket</p>;
     }
 
+    let coordinate = {lat: this.props.event.lat, lng: this.props.event.lng};
+
     return (
       <div className="detail-event-info">
 
@@ -121,7 +123,7 @@ class EventDetail extends React.Component {
             <div className="">
               <h1 className="detail-event-location-head">Location:</h1>
               <p className="detail-event-location-body">{this.props.event.location}</p>
-              <Map type="detail" location={this.props.event.location}/>
+              <Map type="detail" coordinate={coordinate} location={this.props.event.location}/>
             </div>
           </div>
         </div>
