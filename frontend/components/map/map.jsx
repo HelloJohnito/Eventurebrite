@@ -38,27 +38,31 @@ class Map extends React.Component{
   }
 
   componentDidMount(){
-    const zoomNum = (this.props.location === "United States") ? 2 : 11;
+    let location = (this.props.location) ? this.props.location : "United States";
+    const zoomNum = (location === "United States") ? 2 : 11;
     const mapOptions = {
-      center: { lat: coordinates[this.props.location].lat, lng: coordinates[this.props.location].lng },
+      center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
       zoom: zoomNum
     };
 
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
-    this.addMarkers();
+    if(this.props.location) this.addMarkers();
   }
 
   componentDidUpdate(oldProps){
     if(oldProps.location !== this.props.location || oldProps.events !== this.props.events){
-      const zoomNum = (this.props.location === "United States") ? 2 : 11;
+      let location = (this.props.location) ? this.props.location : "United States";
+
+      const zoomNum = (location === "United States") ? 2 : 11;
       const mapOptions = {
-        center: { lat: coordinates[this.props.location].lat, lng: coordinates[this.props.location].lng },
+        center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
         zoom: zoomNum
       };
       const map = this.refs.map;
       this.map = new google.maps.Map(map, mapOptions);
-      this.addMarkers();
+
+      if(this.props.location) this.addMarkers();
     }
   }
 
