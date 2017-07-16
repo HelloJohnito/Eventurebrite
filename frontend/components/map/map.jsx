@@ -51,17 +51,16 @@ class Map extends React.Component{
   }
 
   componentDidUpdate(oldProps){
-    if(oldProps.location !== this.props.location || oldProps.events !== this.props.events){
-      let location = (this.props.location) ? this.props.location : "United States";
+    let location = (this.props.location) ? this.props.location : "United States";
+    let zoomNum = (location === "United States") ? 2 : 11;
 
-      const zoomNum = (location === "United States") ? 2 : 11;
+    if(oldProps.events !== this.props.events || oldProps.coordinate.lat !== this.props.coordinate.lat && oldProps.coordinate.lng !== this.props.coordinate.lng){
       const mapOptions = {
         center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
         zoom: zoomNum
       };
       const map = this.refs.map;
       this.map = new google.maps.Map(map, mapOptions);
-
       if(this.props.location) this.addMarkers();
     }
   }
