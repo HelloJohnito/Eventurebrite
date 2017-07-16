@@ -16,10 +16,10 @@ class BrowsePageIndex extends React.Component {
     return (
       <div className="browse-page">
         <div className="browse-page-left-container">
-          <Map />
+          <Map type="browse"/>
           <CategorySidebar />
         </div>
-        
+
         <EventBrowseContainer type="index" />
       </div>
     );
