@@ -22,7 +22,8 @@ class EventDetail extends React.Component {
   componentWillReceiveProps(nextProps){
     if(this.props.eventId !== nextProps.eventId){
       this.props.fetchDetailEvent(nextProps.eventId);
-  }}
+    }
+  }
 
   handleTicket(){
     this.setState({modalOpen: true});

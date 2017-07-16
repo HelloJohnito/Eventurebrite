@@ -5,8 +5,8 @@ import { Provider } from 'react-redux';
 import SessionFormContainer from './session_form/session_form_container';
 import HomePage from './pages/homepage';
 import ShowPage from './pages/showpage';
-import BrowsePageIndex from './pages/browsepage_index';
-import BrowsePageCategory from './pages/browsepage_category';
+import BrowsePageIndexContainer from './pages/browse/browsepage_index_container';
+import BrowsePageCategoryContainer from './pages/browse/browsepage_category_container';
 import CreatePage from './pages/createpage';
 import EditPage from './pages/editpage';
 import UserPage from './pages/userpage';
@@ -40,8 +40,8 @@ class Root extends React.Component{
           <IndexRoute component={ HomePage }/>
           <Route path="/create" component={ CreatePage } onEnter={this._ensureLoggedIn.bind(this)} />
           <Route path="/edit/:eventId" component={ EditPage } onEnter={this._ensureLoggedIn.bind(this)} />
-          <Route path="/browse" component={ BrowsePageIndex }/>
-          <Route path="/browse/:category" component={ BrowsePageCategory }/>
+          <Route path="/browse" component={ BrowsePageIndexContainer }/>
+          <Route path="/browse/:category" component={ BrowsePageCategoryContainer }/>
           <Route path="/events/:eventId" component={ ShowPage }/>
           <Route path="/user" component={ UserPage } />
           <Route path="/user/tickets" component={ UserPage } />

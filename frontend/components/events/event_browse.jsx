@@ -7,13 +7,13 @@ class EventBrowse extends React.Component {
   }
 
   componentDidMount(){
-    this.props.type === "index" ? this.props.fetchAllEvents(12) : this.props.filterByCategory(12, this.props.category);
+    // this.props.type === "index" ? this.props.fetchAllEvents(12) : this.props.filterByCategory(12, this.props.category);
   }
 
   componentWillReceiveProps(newProps){
-    if(newProps.category !== this.props.category){
-      this.props.filterByCategory(12, newProps.category);
-    }
+    // if(newProps.category !== this.props.category){
+    //   this.props.filterByCategory(12, newProps.category);
+    // }
   }
 
   capitalize(name){
@@ -29,7 +29,7 @@ class EventBrowse extends React.Component {
   }
 
   render(){
-    let text = this.props.category !== undefined ? this.capitalize(this.props.category) : "All";
+    let text = this.props.category === "none" ? "All" : this.capitalize(this.props.category);
 
     return(
       <div className="browse-events-outer">
