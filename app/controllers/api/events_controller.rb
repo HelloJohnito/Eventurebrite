@@ -17,7 +17,6 @@ class Api::EventsController < ApplicationController
   end
 
   def create
-
     @event = Event.new(event_params)
     @event.user_id = current_user.id
 
