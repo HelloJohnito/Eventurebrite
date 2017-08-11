@@ -12,3 +12,11 @@ Rails.application.routes.draw do
   root "static_pages#root"
 
 end
+
+# Example 
+# get 'events', to: 'events#index'
+# get 'events/:id', to: 'events#show'
+# post 'events', to: 'events#create'
+# patch 'events/:id', to: 'events#update'
+# put 'events/:id', to: 'events#update'
+# delete 'events/:id', to: 'events#destroy'
