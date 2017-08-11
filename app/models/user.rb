@@ -13,6 +13,15 @@
 class User < ApplicationRecord
   has_many :events
 
+  # has_many :events,
+  #   primary_key: :id,
+  #   foreign_key: :event_id,
+  #   class_name: 'Event'
+
+  # def events
+  #   Event.where(user_id: self.id)
+  # end
+
   # has_many :joined_events,
   #   through: :tickets,
   #   source: :event

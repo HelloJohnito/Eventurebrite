@@ -16,7 +16,22 @@
 
 class Event < ApplicationRecord
   belongs_to :user
+
+  # def user
+  #   User.find(self.user_id)
+  # end
+
+  # def user=(arg)
+  # end
+
+  # belongs_to :user, {
+  #   primary_key: :id,
+  #   foreign_key: :house_id,
+  #   class_name: 'User'
+  # }
+
   has_many :tickets
+
   has_many :bookmarks
   has_many :category_listings
 
