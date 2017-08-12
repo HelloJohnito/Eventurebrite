@@ -31,7 +31,11 @@ class Api::EventsController < ApplicationController
 
   def update
     @event = current_user.events.find(params[:id])
+    @category_listing = CategoryListing.where(event_id: @event.id)
+
     if @event.update(event_params)
+      @category_listing.update(category_id: params[:event][:category_id].to_i, event_id: @event.id)
+
       render "api/events/show"
     else
       render json: @event.errors.full_messages, status: 422
@@ -45,6 +49,6 @@ class Api::EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :description, :price, :date, :location, :image_url)
+    params.require(:event).permit(:title, :description, :price, :date, :location, :image_url, :lat, :lng)
   end
 end

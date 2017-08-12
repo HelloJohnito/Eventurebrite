@@ -12,25 +12,27 @@ export const fetchAllEvents = (limit) => dispatch => (
 
 export const fetchDetailEvent = (id) => dispatch => {
   return (
-  ApiUtil.fetchEvent(id).then( event => dispatch(receiveDetailEvent(event)),
-  err => dispatch(receiveErrors(err.responseJSON)))
-)};
+    ApiUtil.fetchEvent(id).then( event => dispatch(receiveDetailEvent(event)),
+    err => dispatch(receiveErrors(err.responseJSON)))
+  );
+};
 
-export const createDetailEvent = (event) => dispatch => (
-  ApiUtil.createEvent(event).then( event => dispatch(receiveNewEvent(event)),
-  err => dispatch(receiveErrors(err.responseJSON)))
-);
+export const createDetailEvent = (event) => dispatch => {
+  return (
+    ApiUtil.createEvent(event).then( returnedEvent => dispatch(receiveNewEvent(returnedEvent)),
+    err => dispatch(receiveErrors(err.responseJSON)))
+  );
+};
 
 export const updateDetailEvent = (event) => dispatch => {
   return (
-    ApiUtil.updateEvent(event).then( event => dispatch(receiveDetailEvent(event))
+    ApiUtil.updateEvent(event).then( returnedEvent => dispatch(receiveDetailEvent(returnedEvent))
   ));
 };
 
 export const filterByCategory = (limit, category) => dispatch => (
   ApiUtil.filterByCategory(limit, category).then( events => dispatch(receiveAllEvents(events)))
 );
-
 
 const receiveAllEvents = (events) => ({
     type: RECEIVE_ALL_EVENTS,
