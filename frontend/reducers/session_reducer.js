@@ -45,6 +45,8 @@ const SessionReducer = (state = _nullUser, action) => {
     //   return newState;
 
     case RECEIVE_NEW_EVENT:
+      console.log('this is the reducer')
+      console.log(action.event)
       newState = merge({}, _nullUser, state);
       newState.currentUser.events.push(action.event);
       return newState;

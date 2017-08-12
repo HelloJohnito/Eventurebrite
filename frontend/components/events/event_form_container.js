@@ -4,7 +4,7 @@ import { fetchAllCategories } from '../../actions/category_actions';
 import EventForm from "./event_form";
 
 const mapStateToProps = (state, ownProps) => {
-  let event = { title: "", description: "", price: "", date: "", location: "", image_url: "", category_id: ""};
+  let event = { title: "", description: "", price: "", date: "", location: "", lat: "37.764166", lng: "-122.467263", image_url: "", category_id: ""};
 
   if(ownProps.formType === "edit"){
     event = state.eventDetail;

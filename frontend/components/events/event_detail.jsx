@@ -76,7 +76,7 @@ class EventDetail extends React.Component {
     else{
       ticketOrEditButton = <p className="detail-event-ticket" onClick={this.handleTicket.bind(this)}>Ticket</p>;
     }
-
+    
     let coordinate = {lat: this.props.event.lat, lng: this.props.event.lng};
 
     return (

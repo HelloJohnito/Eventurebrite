@@ -40,11 +40,18 @@ class Map extends React.Component{
   componentDidMount(){
     let location = (this.props.location) ? this.props.location : "United States";
     const zoomNum = (location === "United States") ? 2 : 11;
-    const mapOptions = {
-      center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
-      zoom: zoomNum
-    };
-
+    let mapOptions
+    if(coordinates[location]){
+      mapOptions = {
+        center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
+        zoom: zoomNum
+      };
+    } else {
+      mapOptions = {
+        center: { lat: coordinates['San Francisco'].lat, lng: coordinates['San Francisco'].lng },
+        zoom: zoomNum
+      };
+    }
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     if(this.props.location) this.addMarkers();
@@ -55,10 +62,18 @@ class Map extends React.Component{
     let zoomNum = (location === "United States") ? 2 : 11;
 
     if(oldProps.events !== this.props.events || oldProps.coordinate.lat !== this.props.coordinate.lat && oldProps.coordinate.lng !== this.props.coordinate.lng){
-      const mapOptions = {
-        center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
-        zoom: zoomNum
-      };
+      let mapOptions;
+      if(coordinates[location]){
+        mapOptions = {
+          center: { lat: coordinates[location].lat, lng: coordinates[location].lng },
+          zoom: zoomNum
+        };
+      } else {
+        mapOptions = {
+          center: { lat: coordinates['San Francisco'].lat, lng: coordinates['San Francisco'].lng },
+          zoom: zoomNum
+        };
+      }
       const map = this.refs.map;
       this.map = new google.maps.Map(map, mapOptions);
       if(this.props.location) this.addMarkers();
