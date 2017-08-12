@@ -17,7 +17,6 @@ class EventForm extends React.Component {
     this.props.fetchAllCategories();
   }
 
-
   uploadImage(e){
     e.preventDefault();
     cloudinary.openUploadWidget(
@@ -84,7 +83,6 @@ class EventForm extends React.Component {
     });
     return capitalizedWords.join(" ");
   }
-
 
   render(){
     let text = this.props.formType === "new" ? "Create New Event" : "Update Event";

@@ -26,14 +26,13 @@ export const createDetailEvent = (event) => dispatch => {
 
 export const updateDetailEvent = (event) => dispatch => {
   return (
-    ApiUtil.updateEvent(event).then( event => dispatch(receiveDetailEvent(event))
+    ApiUtil.updateEvent(event).then( returnedEvent => dispatch(receiveDetailEvent(returnedEvent))
   ));
 };
 
 export const filterByCategory = (limit, category) => dispatch => (
   ApiUtil.filterByCategory(limit, category).then( events => dispatch(receiveAllEvents(events)))
 );
-
 
 const receiveAllEvents = (events) => ({
     type: RECEIVE_ALL_EVENTS,
