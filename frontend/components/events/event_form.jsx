@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import coordinates from '../map/coordinates';
 
 
 
@@ -8,7 +9,6 @@ class EventForm extends React.Component {
     super(props);
     this.state = this.props.event;
   }
-
 
   componentDidMount(){
     if(this.props.formType === "edit"){
@@ -31,8 +31,14 @@ class EventForm extends React.Component {
   }
 
   update(field){
+    let value;
     return e => {
-      this.setState({[field]: e.currentTarget.value});
+      if(field === 'title' || field === 'location'){
+        value = this.capitalize(e.currentTarget.value);
+      } else {
+        value = e.currentTarget.value;
+      }
+      this.setState({[field]: value});
     };
   }
 
@@ -48,6 +54,14 @@ class EventForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    if(coordinates[this.state.location]){
+      this.state.lat = coordinates[this.state.location].lat;
+      this.state.lng = coordinates[this.state.location].lng;
+    }
+    else {
+      this.state.lat = 37.764166;
+      this.state.lng = -122.467263;
+    }
     this.props.action(this.state).then( success => hashHistory.push(`/events/${success.event.id}`));
   }
 
@@ -61,6 +75,14 @@ class EventForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  capitalize(value){
+    let words = value.split(" ");
+    let capitalizedWords = words.map((el) => {
+      return el.charAt(0).toUpperCase() + el.slice(1);
+    });
+    return capitalizedWords.join(" ");
   }
 
 

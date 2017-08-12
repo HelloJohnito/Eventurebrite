@@ -14,8 +14,6 @@ export const fetchEvent = (id) => (
 );
 
 export const createEvent = (event) => {
-  console.log("this is the util")
-  console.log(event)
   return $.ajax({
     method: 'POST',
     url: 'api/events',
