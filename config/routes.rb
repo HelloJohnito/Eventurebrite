@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   namespace :api, defaults: {format: :json} do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
@@ -13,7 +12,7 @@ Rails.application.routes.draw do
 
 end
 
-# Example 
+# Example
 # get 'events', to: 'events#index'
 # get 'events/:id', to: 'events#show'
 # post 'events', to: 'events#create'
