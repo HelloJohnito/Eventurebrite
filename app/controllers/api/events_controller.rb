@@ -10,7 +10,6 @@ class Api::EventsController < ApplicationController
     render 'api/events/index'
   end
 
-
   def show
     @event = Event.find(params[:id])
     render "api/events/show"
